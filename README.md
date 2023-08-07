@@ -1,4 +1,6 @@
-<p style="text-align: center;"><img src="https://santuario-imaculado-coracao-de-maria.netlify.app/assets/img/logo.png" alt="Artist Palette" width="200" /></p>
+<p align="center">
+    <img src="https://santuario-imaculado-coracao-de-maria.netlify.app/assets/img/logo.png" width="200">
+</p>
 
 ## <h1 style="text-align: center;">Website Santuário Imaculado Coração de Maria</h1>
 
