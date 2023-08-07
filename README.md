@@ -1,6 +1,8 @@
-# Website Santuário Imaculado Coração de Maria
+## <h1 style="text-align: center;">Website Santuário Imaculado Coração de Maria</h1>
 
-O projeto de conclusão de curso apresenta a concepção e desenvolvimento de um site cativante e funcional para uma igreja, fornecendo uma plataforma digital acolhedora para a comunidade religiosa. Com design intuitivo, informações sobre eventos, sermões e interação, o site busca fortalecer a conexão entre fiéis e a igreja no mundo virtual.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2a5f0851-938f-4ebf-a4ef-13e32623cf94/deploy-status)](https://app.netlify.com/sites/santuario-imaculado-coracao-de-maria/deploys)
+
+<p>O projeto de conclusão de curso apresenta a concepção e desenvolvimento de um site cativante e funcional para uma igreja, fornecendo uma plataforma digital acolhedora para a comunidade religiosa. Com design intuitivo, informações sobre eventos, sermões e interação, o site busca fortalecer a conexão entre fiéis e a igreja no mundo virtual.</p>
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Artist%20Palette.png" alt="Artist Palette" width="25" height="25" /> Documentação de cores
 
