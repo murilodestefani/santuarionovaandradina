@@ -10,6 +10,11 @@
 
 <p>O projeto de conclusão de curso apresenta a concepção e desenvolvimento de um site cativante e funcional para uma igreja, fornecendo uma plataforma digital acolhedora para a comunidade religiosa. Com design intuitivo, informações sobre eventos, sermões e interação, o site busca fortalecer a conexão entre fiéis e a igreja no mundo virtual.</p>
 
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Framed%20Picture.png" alt="Framed Picture" width="25" height="25" /> Protótipo
+
+[![Figma Template](https://img.shields.io/badge/Figma%20Template-FDFDFD?style=for-the-badge&logo=figma)](https://www.figma.com/file/2Z26NyHVj4dba3JmwEageA/Santu%C3%A1rio-Imaculado-Cora%C3%A7%C3%A3o-de-Maria?type=design&node-id=2%3A6&mode=design&t=74g6IVMWPuJjryTU-1)
+
+
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Artist%20Palette.png" alt="Artist Palette" width="25" height="25" /> Documentação de cores
 
 | Cor               | Hexadecimal                                                |
