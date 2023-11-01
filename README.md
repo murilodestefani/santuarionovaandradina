@@ -2,10 +2,6 @@
     <img src="https://santuario-imaculado-coracao-de-maria.netlify.app/assets/img/logo.png" width="200">
 </p>
 
-<p align="center">
-[![Verificar Código HTML](https://github.com/murilodestefani/Santuario-Imaculado-Coracao-de-Maria/actions/workflows/html-check.yml/badge.svg)](https://github.com/murilodestefani/Santuario-Imaculado-Coracao-de-Maria/actions/workflows/html-check.yml)
-</p>
-
 ## <h1 style="text-align: center;">Website Santuário Imaculado Coração de Maria</h1>
 
 <p align="center">
