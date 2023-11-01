@@ -1,0 +1,14 @@
+name: Verificar Código HTML
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Verificar Código HTML
+      uses: htmlhint/htmlhint-action@v2
+      with:
+        files: 'index.html'
