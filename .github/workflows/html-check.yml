@@ -1,14 +1,13 @@
-name: Verificar Código HTML
-on:
-  push:
-    branches:
-      - main
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout do código
+      uses: actions/checkout@v2
+
+    - name: Instalar HTMLHint
+      run: npm install -g htmlhint
+
     - name: Verificar Código HTML
-      uses: htmlhint/htmlhint-action@v2
-      with:
-        files: 'index.html'
+      run: htmlhint --config .htmlhintrc "./index.html"
