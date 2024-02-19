@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0cf82b93-9596-4ddb-bfd7-56783a89c431/deploy-status)](https://app.netlify.com/sites/santuario-novaandradina/deploys)
