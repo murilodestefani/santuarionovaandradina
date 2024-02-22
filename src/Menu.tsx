@@ -14,82 +14,9 @@ import {
   DropdownMenu,
   DropdownTrigger,
 } from "@nextui-org/react";
-import {
-  ChevronDown,
-  Lock,
-  Activity,
-  Flash,
-  Server,
-  TagUser,
-  Scale,
-} from "./Icons.tsx";
+import { CaretDown } from "@phosphor-icons/react";
 
 export function Menu() {
-  const icons = {
-    chevron: (
-      <ChevronDown
-        fill="currentColor"
-        size={16}
-        height={undefined}
-        width={undefined}
-      />
-    ),
-    scale: (
-      <Scale
-        className="text-warning"
-        fill="currentColor"
-        size={30}
-        height={undefined}
-        width={undefined}
-      />
-    ),
-    lock: (
-      <Lock
-        className="text-success"
-        fill="currentColor"
-        size={30}
-        height={undefined}
-        width={undefined}
-      />
-    ),
-    activity: (
-      <Activity
-        className="text-secondary"
-        fill="currentColor"
-        size={30}
-        height={undefined}
-        width={undefined}
-      />
-    ),
-    flash: (
-      <Flash
-        className="text-primary"
-        fill="currentColor"
-        size={30}
-        height={undefined}
-        width={undefined}
-      />
-    ),
-    server: (
-      <Server
-        className="text-success"
-        fill="currentColor"
-        size={30}
-        height={undefined}
-        width={undefined}
-      />
-    ),
-    user: (
-      <TagUser
-        className="text-danger"
-        fill="currentColor"
-        size={30}
-        height={undefined}
-        width={undefined}
-      />
-    ),
-  };
-
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
@@ -144,7 +71,7 @@ export function Menu() {
               <Button
                 disableRipple
                 className="bg-transparent p-0 text-base text-slate-50 data-[hover=true]:bg-transparent"
-                endContent={icons.chevron}
+                endContent={<CaretDown />}
                 radius="sm"
                 variant="light"
               >
@@ -181,7 +108,7 @@ export function Menu() {
               <Button
                 disableRipple
                 className="bg-transparent p-0 text-base text-slate-50 data-[hover=true]:bg-transparent"
-                endContent={icons.chevron}
+                endContent={<CaretDown />}
                 radius="sm"
                 variant="light"
               >
@@ -213,7 +140,7 @@ export function Menu() {
               <Button
                 disableRipple
                 className="bg-transparent p-0 text-base text-slate-50 data-[hover=true]:bg-transparent"
-                endContent={icons.chevron}
+                endContent={<CaretDown />}
                 radius="sm"
                 variant="light"
               >
@@ -245,7 +172,7 @@ export function Menu() {
               <Button
                 disableRipple
                 className="bg-transparent p-0 text-base text-slate-50 data-[hover=true]:bg-transparent"
-                endContent={icons.chevron}
+                endContent={<CaretDown />}
                 radius="sm"
                 variant="light"
               >
