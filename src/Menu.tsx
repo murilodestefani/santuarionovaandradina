@@ -44,7 +44,7 @@ export function Menu() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-penn-red-900">
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-transparent">
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
