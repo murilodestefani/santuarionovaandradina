@@ -2,10 +2,9 @@ import { Button } from "@nextui-org/react";
 
 export function Hero() {
   return (
-    <>
       <section
         id="hero"
-        className="mx-auto flex h-svh flex-col justify-center bg-[url('/assets/img/image.png')] bg-cover bg-center bg-no-repeat -mt-16"
+        className="flex h-svh flex-col justify-center bg-[url('/assets/img/image.png')] bg-cover bg-center bg-no-repeat -mt-16"
       >
         <div className="container flex flex-col p-4 sm:p-0">
           <div className="flex flex-col xl:max-w-xl gap-2">
@@ -37,7 +36,6 @@ export function Hero() {
           </div>
         </div>
       </section>
-    </>
   );
 }
 
