@@ -51,11 +51,13 @@ export function Menu() {
           className="flex text-slate-50 sm:hidden"
         />
         <NavbarBrand>
-          <img
-            className="h-9"
-            src="/assets/img/logo.png"
-            alt="Logo do Santuário Nova Andradina"
-          />
+          <Link href="/">
+            <img
+              className="h-9"
+              src="/assets/img/logo.png"
+              alt="Logo do Santuário Nova Andradina"
+            />
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
