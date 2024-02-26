@@ -1,4 +1,4 @@
-import { Button } from "@nextui-org/react";
+import { Button, Card, CardFooter, Image, Link } from "@nextui-org/react";
 import { BookmarkSimple, CalendarBlank, Camera } from "@phosphor-icons/react";
 
 export function Eventos() {
@@ -16,23 +16,37 @@ export function Eventos() {
 
         <div className="ultimos-eventos flex items-center justify-center">
           <div className="grid gap-6 sm:grid-cols-3">
-            <article className="aspect-2/3 flex max-w-80 cursor-pointer flex-col justify-end gap-2 rounded-2xl bg-[url('https://source.unsplash.com/random/?jesus')] bg-cover bg-center bg-no-repeat p-6 drop-shadow-xl">
-              <div className="info flex justify-between">
-                <div className="data flex items-center gap-1">
-                  <CalendarBlank className="text-lion-500" weight="fill" />
-                  <span className="text-sm text-slate-50">15 Set, 2023</span>
+            <Card isPressable isFooterBlurred className="aspect-2/3 max-w-80">
+              <Image
+                removeWrapper
+                className="z-0 h-full w-full object-cover"
+                width="100%"
+                src="https://source.unsplash.com/random/?a"
+              />
+              <CardFooter className="absolute bottom-0 z-10 flex flex-col gap-1 border-t-1 border-zinc-100/50 bg-white/30">
+                <div className="flex w-full justify-between">
+                  <Link
+                    href="#"
+                    className="flex items-center justify-center gap-1 text-slate-50"
+                    color="foreground"
+                  >
+                    <CalendarBlank className="text-lion-500" weight="fill" />
+                    <span className="text-tiny">25 Dez, 2024</span>
+                  </Link>
+                  <Link
+                    href="#"
+                    className="flex items-center justify-center gap-1 text-slate-50"
+                    color="foreground"
+                  >
+                    <BookmarkSimple className="text-lion-500" weight="fill" />
+                    <span className="text-tiny">Categoria</span>
+                  </Link>
                 </div>
-
-                <div className="categoria flex items-center gap-1">
-                  <BookmarkSimple className="text-lion-500" weight="fill" />
-                  <span className="text-sm text-slate-50">Redentoristas</span>
-                </div>
-              </div>
-
-              <h4 className="text-xl font-bold text-slate-50">
-                Lorem ipsum dolor sit amet consectetur
-              </h4>
-            </article>
+                <h2 className="line-clamp-2 text-start text-xl font-bold text-slate-50">
+                  Lorem ipsum dolor sit amet consectetur
+                </h2>
+              </CardFooter>
+            </Card>
           </div>
         </div>
 
