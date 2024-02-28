@@ -31,8 +31,7 @@ export function Video() {
         <Link className="w-full lg:w-2/3">
           <Image
             className="aspect-video h-full rounded-t-none object-cover md:rounded-s-none"
-            removeWrapper
-            src="https://source.unsplash.com/random/?jesus-christ"
+            src="https://source.unsplash.com/random/?comunhão"
           />
         </Link>
       </Card>

@@ -7,6 +7,7 @@ import Noticias from "./Noticias.tsx";
 import Atalhos from "./Atalhos.tsx";
 import Movimentos from "./Movimentos.tsx";
 import Video from "./Video.tsx";
+import Oracao from "./Oracao.tsx";
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
       <Slider />
       <Noticias />
       <Atalhos />
-      <Movimentos/>
-      <Video/>
+      <Movimentos />
+      <Video />
+      <Oracao/>
     </>
   );
 }
