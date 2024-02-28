@@ -4,6 +4,7 @@ import Hero from "./Hero.tsx";
 import Menu from "./Menu.tsx";
 import Slider from "./Slider.tsx";
 import Noticias from "./Noticias.tsx";
+import Atalhos from "./Atalhos.tsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Eventos />
       <Slider />
       <Noticias />
+      <Atalhos />
     </>
   );
 }
