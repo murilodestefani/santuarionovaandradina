@@ -58,7 +58,7 @@ export function Eventos() {
                 </CardFooter>
               </Card>
             </Link>
-            <Link href="#">
+            <Link href="#" className="hidden md:block">
               <Card
                 isPressable
                 isFooterBlurred
@@ -97,12 +97,12 @@ export function Eventos() {
                 </CardFooter>
               </Card>
             </Link>
-            <Link href="#">
+            <Link href="#" className="hidden md:block">
               <Card
                 isPressable
                 isFooterBlurred
                 isBlurred
-                className="hidden aspect-2/3 max-w-80 md:block"
+                className="aspect-2/3 max-w-80"
               >
                 <Image
                   isZoomed
@@ -136,12 +136,12 @@ export function Eventos() {
                 </CardFooter>
               </Card>
             </Link>
-            <Link href="#">
+            <Link href="#" className="hidden xl:block">
               <Card
                 isPressable
                 isFooterBlurred
                 isBlurred
-                className="hidden aspect-2/3 max-w-80 xl:block"
+                className="aspect-2/3 max-w-80 xl:block"
               >
                 <Image
                   isZoomed
@@ -175,12 +175,12 @@ export function Eventos() {
                 </CardFooter>
               </Card>
             </Link>
-            <Link href="#">
+            <Link href="#" className="hidden xl:block">
               <Card
                 isPressable
                 isFooterBlurred
                 isBlurred
-                className="hidden aspect-2/3 max-w-80 xl:block"
+                className="aspect-2/3 max-w-80 xl:block"
               >
                 <Image
                   isZoomed
@@ -214,12 +214,12 @@ export function Eventos() {
                 </CardFooter>
               </Card>
             </Link>
-            <Link href="#">
+            <Link href="#" className="hidden xl:block">
               <Card
                 isPressable
                 isFooterBlurred
                 isBlurred
-                className="hidden aspect-2/3 max-w-80 xl:block"
+                className="aspect-2/3 max-w-80 xl:block"
               >
                 <Image
                   isZoomed

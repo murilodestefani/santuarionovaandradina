@@ -6,6 +6,7 @@ import Slider from "./Slider.tsx";
 import Noticias from "./Noticias.tsx";
 import Atalhos from "./Atalhos.tsx";
 import Movimentos from "./Movimentos.tsx";
+import Video from "./Video.tsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Noticias />
       <Atalhos />
       <Movimentos/>
+      <Video/>
     </>
   );
 }
