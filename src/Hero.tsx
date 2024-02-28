@@ -6,9 +6,9 @@ export function Hero() {
       id="hero"
       className="-mt-16 flex h-svh flex-col justify-center bg-[url('/assets/img/image.png')] bg-cover bg-center bg-no-repeat"
     >
-      <div className="container flex flex-col p-4 sm:p-0">
+      <div className="container flex flex-col p-4 md:p-0">
         <div className="flex flex-col gap-2 xl:max-w-xl">
-          <h1 className="text-center text-4xl font-bold text-neutral-50 sm:text-4xl xl:text-start xl:text-6xl">
+          <h1 className="text-center text-5xl font-bold text-neutral-50 md:text-6xl xl:text-start xl:text-6xl">
             Bem-vindo ao Santuário
           </h1>
           <p className="text-justify text-sm text-neutral-50 sm:text-center sm:text-base xl:text-start">
