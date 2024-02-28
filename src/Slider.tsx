@@ -6,7 +6,7 @@ export function Slider() {
     >
       <div className="absolute z-10 h-full w-full bg-gradient-to-t from-black/50"></div>
       <div className="gap- container z-20 flex flex-col items-center justify-center p-4">
-        <q className="text text-center text-2xl font-bold text-neutral-50 md:text-3xl lg:text-4xl">
+        <q className="text-center text-2xl font-bold text-neutral-50 md:text-3xl lg:text-4xl">
           Eu sou o caminho, a verdade e a vida.
         </q>
         <p className="italic text-neutral-50 md:text-lg lg:text-xl">

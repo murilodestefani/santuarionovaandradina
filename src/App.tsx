@@ -5,6 +5,7 @@ import Menu from "./Menu.tsx";
 import Slider from "./Slider.tsx";
 import Noticias from "./Noticias.tsx";
 import Atalhos from "./Atalhos.tsx";
+import Movimentos from "./Movimentos.tsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Slider />
       <Noticias />
       <Atalhos />
+      <Movimentos/>
     </>
   );
 }

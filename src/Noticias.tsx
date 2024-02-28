@@ -17,7 +17,7 @@ export function Noticias() {
           </h2>
         </div>
 
-        <div className="ultimos-eventos flex items-center justify-center">
+        <div className="flex items-center justify-center">
           <div className="grid gap-6 sm:grid-cols-3">
             <Link href="#" className="flex max-w-80 flex-col gap-1">
               <Card isPressable isBlurred className="aspect-square">
