@@ -1,8 +1,5 @@
-import { Button, Card, CardFooter, Image, Link } from "@nextui-org/react";
+import { Button, Card, Image, Link } from "@nextui-org/react";
 import {
-  BookmarkSimple,
-  CalendarBlank,
-  Camera,
   MagnifyingGlass,
 } from "@phosphor-icons/react";
 
