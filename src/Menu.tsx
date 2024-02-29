@@ -27,16 +27,16 @@ export function Menu() {
       Santuário
     </Link>,
     <Link href="#" color="foreground">
-      Comunidade
-    </Link>,
-    <Link href="#" color="foreground">
       Galeria
     </Link>,
     <Link href="#" color="foreground">
-      Eventos
+      Atuação
     </Link>,
     <Link href="#" color="foreground">
-      Devocional
+      Notícias
+    </Link>,
+    <Link href="#" color="foreground">
+      Missas
     </Link>,
     <Link href="#" color="foreground">
       Contato
