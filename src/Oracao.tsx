@@ -3,13 +3,13 @@ import { Image } from "@nextui-org/react";
 export function Oracao() {
   return (
     <section id="oracao" className="flex min-h-svh items-center justify-center">
-      <div className="container flex flex-col items-center">
-        <Image className="h-72" src="/assets/img/imaculado.png" />
+      <div className="container flex flex-col gap-2 justify-center items-center px-4 md:flex-row-reverse">
+        <Image className="h-72 lg:h-80 xl:h-96" src="/assets/img/imaculado.png" />
         <div>
-          <h2 className="text-center text-2xl font-bold text-penn-red-900">
+          <h2 className="text-center text-2xl font-bold text-penn-red-900 md:text-3xl lg:text-4xl">
             Consagração
           </h2>
-          <p className="mt-1 text-center text-tiny">
+          <p className="mt-1 text-center text-tiny font-semibold lg:text-sm">
             Ó Coração Imaculado de Maria,
             <br /> Repleto de bondade, mostrai-nos o Vosso amor. <br />A chama
             do vosso Coração, ó Maria, desça sobre todos os homens! <br />

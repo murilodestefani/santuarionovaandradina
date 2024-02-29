@@ -8,6 +8,8 @@ import Atalhos from "./Atalhos.tsx";
 import Movimentos from "./Movimentos.tsx";
 import Video from "./Video.tsx";
 import Oracao from "./Oracao.tsx";
+import Instagram from "./Instagram.tsx";
+import Rodape from "./Rodape.tsx";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
       <Movimentos />
       <Video />
       <Oracao/>
+      <Instagram/>
+      <Rodape/>
     </>
   );
 }
