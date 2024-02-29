@@ -44,7 +44,7 @@ export function Menu() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-transparent">
+    <Navbar shouldHideOnScroll onMenuOpenChange={setIsMenuOpen} className="bg-transparent">
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -280,7 +280,6 @@ export function Menu() {
                 Missas Dominicais
               </Link>
             </DropdownItem>
-            
           </DropdownMenu>
         </Dropdown>
       </NavbarContent>
