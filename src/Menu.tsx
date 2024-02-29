@@ -82,28 +82,53 @@ export function Menu() {
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu>
-            <DropdownItem key="Página 1">
+            <DropdownItem key="História">
               <Link color="foreground" href="#">
-                Página 1
+                História
               </Link>
             </DropdownItem>
-            <DropdownItem key="Página 2">
+            <DropdownItem key="Missionários Redentoristas">
               <Link color="foreground" href="#">
-                Página 2
+                Missionários Redentoristas
               </Link>
             </DropdownItem>
-            <DropdownItem key="Página 3">
+            <DropdownItem key="Horários">
               <Link color="foreground" href="#">
-                Página 3
+                Horários
+              </Link>
+            </DropdownItem>
+            <DropdownItem key="Festa do Padroeiro">
+              <Link color="foreground" href="#">
+                Festa do Padroeiro
+              </Link>
+            </DropdownItem>
+            <DropdownItem key="Loja">
+              <Link color="foreground" href="#">
+                Loja
+              </Link>
+            </DropdownItem>
+            <DropdownItem key="Comunidades">
+              <Link color="foreground" href="#">
+                Comunidades
+              </Link>
+            </DropdownItem>
+            <DropdownItem key="Sacramentos">
+              <Link color="foreground" href="#">
+                Sacramentos
+              </Link>
+            </DropdownItem>
+            <DropdownItem key="Expediente">
+              <Link color="foreground" href="#">
+                Expediente
+              </Link>
+            </DropdownItem>
+            <DropdownItem key="Peregrinação Diocesana">
+              <Link color="foreground" href="#">
+                Peregrinação Diocesana
               </Link>
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <NavbarItem>
-          <Link className="text-slate-50" href="#">
-            Comunidade
-          </Link>
-        </NavbarItem>
         <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
@@ -119,19 +144,29 @@ export function Menu() {
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu>
-            <DropdownItem key="Página 1">
+            <DropdownItem key="Fotos">
               <Link color="foreground" href="#">
-                Página 1
+                Fotos
               </Link>
             </DropdownItem>
-            <DropdownItem key="Página 2">
+            <DropdownItem key="Vídeos">
               <Link color="foreground" href="#">
-                Página 2
+                Vídeos
               </Link>
             </DropdownItem>
-            <DropdownItem key="Página 3">
+            <DropdownItem key="Documentos p/ Sacramento">
               <Link color="foreground" href="#">
-                Página 3
+                Documentos p/ Sacramento
+              </Link>
+            </DropdownItem>
+            <DropdownItem key="Media Kit">
+              <Link color="foreground" href="#">
+                Media Kit
+              </Link>
+            </DropdownItem>
+            <DropdownItem key="Calendário Paroquial">
+              <Link color="foreground" href="#">
+                Calendário Paroquial
               </Link>
             </DropdownItem>
           </DropdownMenu>
@@ -146,24 +181,56 @@ export function Menu() {
                 radius="sm"
                 variant="light"
               >
+                Atuação
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu>
+            <DropdownItem key="Pastorais">
+              <Link color="foreground" href="#">
+                Pastorais
+              </Link>
+            </DropdownItem>
+            <DropdownItem key="Movimentos">
+              <Link color="foreground" href="#">
+                Movimentos
+              </Link>
+            </DropdownItem>
+            <DropdownItem key="Serviços">
+              <Link color="foreground" href="#">
+                Serviços
+              </Link>
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+        <Dropdown>
+          <NavbarItem>
+            <DropdownTrigger>
+              <Button
+                disableRipple
+                className="bg-transparent p-0 text-base text-slate-50 data-[hover=true]:bg-transparent"
+                endContent={<CaretDown />}
+                radius="sm"
+                variant="light"
+              >
+                Notícias
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu>
+            <DropdownItem key="Artigos e Publicações">
+              <Link color="foreground" href="#">
+                Artigos e Publicações
+              </Link>
+            </DropdownItem>
+            <DropdownItem key="Eventos">
+              <Link color="foreground" href="#">
                 Eventos
-              </Button>
-            </DropdownTrigger>
-          </NavbarItem>
-          <DropdownMenu>
-            <DropdownItem key="Página 1">
-              <Link color="foreground" href="#">
-                Página 1
               </Link>
             </DropdownItem>
-            <DropdownItem key="Página 2">
+            <DropdownItem key="Redes Sociais">
               <Link color="foreground" href="#">
-                Página 2
-              </Link>
-            </DropdownItem>
-            <DropdownItem key="Página 3">
-              <Link color="foreground" href="#">
-                Página 3
+                Redes Sociais
               </Link>
             </DropdownItem>
           </DropdownMenu>
@@ -178,26 +245,42 @@ export function Menu() {
                 radius="sm"
                 variant="light"
               >
-                Devocional
+                Missas
               </Button>
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu>
-            <DropdownItem key="Página 1">
+            <DropdownItem key="Novena Perpétua">
               <Link color="foreground" href="#">
-                Página 1
+                Novena Perpétua
               </Link>
             </DropdownItem>
-            <DropdownItem key="Página 2">
+            <DropdownItem key="Missa do Sagrado Coração">
               <Link color="foreground" href="#">
-                Página 2
+                Missa do Sagrado Coração
               </Link>
             </DropdownItem>
-            <DropdownItem key="Página 3">
+            <DropdownItem key="Missa das Rosas">
               <Link color="foreground" href="#">
-                Página 3
+                Missa das Rosas
               </Link>
             </DropdownItem>
+            <DropdownItem key="Sábado Votivo">
+              <Link color="foreground" href="#">
+                Sábado Votivo
+              </Link>
+            </DropdownItem>
+            <DropdownItem key="Quinta Eucaristica">
+              <Link color="foreground" href="#">
+                Quinta Eucaristica
+              </Link>
+            </DropdownItem>
+            <DropdownItem key="Missas Dominicais">
+              <Link color="foreground" href="#">
+                Missas Dominicais
+              </Link>
+            </DropdownItem>
+            
           </DropdownMenu>
         </Dropdown>
       </NavbarContent>

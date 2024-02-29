@@ -28,16 +28,19 @@ export function Rodape() {
             Santuário
           </Link>
           <Link className="justify-center text-tiny text-neutral-50 md:text-sm xl:text-base" href="#">
-            Comunidade
-          </Link>
-          <Link className="justify-center text-tiny text-neutral-50 md:text-sm xl:text-base" href="#">
             Galeria
           </Link>
           <Link className="justify-center text-tiny text-neutral-50 md:text-sm xl:text-base" href="#">
-            Eventos
+            Atuação
           </Link>
           <Link className="justify-center text-tiny text-neutral-50 md:text-sm xl:text-base" href="#">
-            Devocional
+            Notícias
+          </Link>
+          <Link className="justify-center text-tiny text-neutral-50 md:text-sm xl:text-base" href="#">
+            Missas
+          </Link>
+          <Link className="justify-center text-tiny text-neutral-50 md:text-sm xl:text-base" href="#">
+            Contato
           </Link>
         </div>
         <div className="flex gap-4">
