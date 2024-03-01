@@ -44,7 +44,11 @@ export function Menu() {
   ];
 
   return (
-    <Navbar shouldHideOnScroll onMenuOpenChange={setIsMenuOpen} className="bg-transparent">
+    <Navbar
+      position="static"
+      onMenuOpenChange={setIsMenuOpen}
+      className="bg-transparent"
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
