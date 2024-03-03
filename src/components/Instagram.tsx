@@ -31,7 +31,7 @@ export function Instagram() {
         <Image
           className="hidden xl:block"
           radius="none"
-          src="./assets/img/instagram/06.png"
+          src="../assets/img/instagram/06.png"
         />
       </div>
     </section>
