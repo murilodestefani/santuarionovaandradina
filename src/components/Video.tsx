@@ -36,11 +36,7 @@ export function Video() {
           </div>
         </div>
         <Link className="lg:w-2/3" isExternal href="#">
-          <Image
-            className="aspect-video"
-            radius="none"
-            src={Cover}
-          />
+          <Image className="aspect-video" radius="none" src={Cover} />
         </Link>
       </div>
     </section>

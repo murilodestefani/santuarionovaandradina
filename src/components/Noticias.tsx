@@ -1,5 +1,6 @@
-import { Button, Card, Image, Link } from "@nextui-org/react";
+import { Button, Card, Image } from "@nextui-org/react";
 import { Newspaper } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
 
 export function Noticias() {
   return (
@@ -7,7 +8,7 @@ export function Noticias() {
       id="noticias"
       className="flex min-h-svh items-center justify-center"
     >
-      <div className="container flex flex-col gap-10 p-4 py-20">
+      <div className="container flex flex-col items-center gap-10 p-4 py-20">
         <div className="cabecalho flex flex-col gap-2">
           <h6 className="text-center text-xs uppercase tracking-widest text-shark-700 md:text-sm lg:text-base">
             acompanhe as
@@ -19,7 +20,7 @@ export function Noticias() {
 
         <div className="flex items-center justify-center">
           <div className="grid gap-6 sm:grid-cols-3">
-            <Link href="#" className="flex max-w-80 flex-col gap-1">
+            <Link to={"/"} className="flex max-w-80 flex-col gap-1">
               <Card isPressable isBlurred className="aspect-square">
                 <Image
                   isZoomed
@@ -30,12 +31,12 @@ export function Noticias() {
                 />
               </Card>
               <Link
-                href="#"
+                to={"/"}
                 className="absolute right-4 top-4 rounded-md bg-neutral-50/20 p-1 text-xs font-bold uppercase text-neutral-50"
               >
                 Celebrações
               </Link>
-              <Link href="#" className="self-start text-tiny text-shark-300">
+              <Link to={"/"} className="self-start text-tiny text-shark-300">
                 01.12.2024
               </Link>
               <h4 className="line-clamp-2 text-lg font-bold text-shark-950 md:text-base lg:text-lg">
@@ -50,7 +51,7 @@ export function Noticias() {
                 temporada especial.
               </p>
             </Link>
-            <Link href="#" className="flex max-w-80 flex-col gap-1 hidden md:block">
+            <Link to={"/"} className="hidden max-w-80 flex-col gap-1 md:block">
               <Card isPressable isBlurred className="aspect-square">
                 <Image
                   isZoomed
@@ -61,12 +62,12 @@ export function Noticias() {
                 />
               </Card>
               <Link
-                href="#"
+                to={"/"}
                 className="absolute right-4 top-4 rounded-md bg-neutral-50/20 p-1 text-xs font-bold uppercase text-neutral-50"
               >
-                Celebrações
+                Mensagem
               </Link>
-              <Link href="#" className="self-start text-tiny text-shark-300">
+              <Link to={"/"} className="self-start text-tiny text-shark-300">
                 20.08.2024
               </Link>
               <h4 className="line-clamp-2 text-lg font-bold text-shark-950 md:text-base lg:text-lg">
@@ -81,7 +82,7 @@ export function Noticias() {
                 palavras ressoaram profundamente em suas vidas.
               </p>
             </Link>
-            <Link href="#" className="flex max-w-80 flex-col gap-1 hidden md:block">
+            <Link to={"/"} className="hidden max-w-80 flex-col gap-1 md:block">
               <Card isPressable isBlurred className="aspect-square">
                 <Image
                   isZoomed
@@ -92,12 +93,12 @@ export function Noticias() {
                 />
               </Card>
               <Link
-                href="#"
+                to={"/"}
                 className="absolute right-4 top-4 rounded-md bg-neutral-50/20 p-1 text-xs font-bold uppercase text-neutral-50"
               >
                 Juventude
               </Link>
-              <Link href="#" className="self-start text-tiny text-shark-300">
+              <Link to={"/"} className="self-start text-tiny text-shark-300">
                 05.09.2024
               </Link>
               <h4 className="line-clamp-2 text-lg font-bold text-shark-950 md:text-base lg:text-lg">
@@ -112,7 +113,7 @@ export function Noticias() {
                 desenvolvimento espiritual em um ambiente acolhedor.
               </p>
             </Link>
-            <Link href="#" className="flex max-w-80 flex-col gap-1 hidden xl:block">
+            <Link to={"/"} className="hidden max-w-80 flex-col gap-1 xl:block">
               <Card isPressable isBlurred className="aspect-square">
                 <Image
                   isZoomed
@@ -123,12 +124,12 @@ export function Noticias() {
                 />
               </Card>
               <Link
-                href="#"
+                to={"/"}
                 className="absolute right-4 top-4 rounded-md bg-neutral-50/20 p-1 text-xs font-bold uppercase text-neutral-50"
               >
                 Espiritualidade
               </Link>
-              <Link href="#" className="self-start text-tiny text-shark-300">
+              <Link to={"/"} className="self-start text-tiny text-shark-300">
                 15.06.2024
               </Link>
               <h4 className="line-clamp-2 text-lg font-bold text-shark-950 md:text-base lg:text-lg">
@@ -144,7 +145,7 @@ export function Noticias() {
                 valores fundamentais.
               </p>
             </Link>
-            <Link href="#" className="flex max-w-80 flex-col gap-1 hidden xl:block">
+            <Link to={"/"} className="hidden max-w-80 flex-col gap-1 xl:block">
               <Card isPressable isBlurred className="aspect-square">
                 <Image
                   isZoomed
@@ -155,12 +156,12 @@ export function Noticias() {
                 />
               </Card>
               <Link
-                href="#"
+                to={"/"}
                 className="absolute right-4 top-4 rounded-md bg-neutral-50/20 p-1 text-xs font-bold uppercase text-neutral-50"
               >
                 Comunidade
               </Link>
-              <Link href="#" className="self-start text-tiny text-shark-300">
+              <Link to={"/"} className="self-start text-tiny text-shark-300">
                 05.02.2024
               </Link>
               <h4 className="line-clamp-2 text-lg font-bold text-shark-950 md:text-base lg:text-lg">
@@ -176,7 +177,7 @@ export function Noticias() {
                 sociedade.
               </p>
             </Link>
-            <Link href="#" className="flex max-w-80 flex-col gap-1 hidden xl:block">
+            <Link to={"/"} className="hidden max-w-80 flex-col gap-1 xl:block">
               <Card isPressable isBlurred className="aspect-square">
                 <Image
                   isZoomed
@@ -187,12 +188,12 @@ export function Noticias() {
                 />
               </Card>
               <Link
-                href="#"
+                to={"/"}
                 className="absolute right-4 top-4 rounded-md bg-neutral-50/20 p-1 text-xs font-bold uppercase text-neutral-50"
               >
                 Natal
               </Link>
-              <Link href="#" className="self-start text-tiny text-shark-300">
+              <Link to={"/"} className="self-start text-tiny text-shark-300">
                 25.12.2023
               </Link>
               <h4 className="line-clamp-2 text-lg font-bold text-shark-950 md:text-base lg:text-lg">
@@ -210,14 +211,14 @@ export function Noticias() {
             </Link>
           </div>
         </div>
-
-        <Button
-          href="#"
-          startContent={<Newspaper weight="fill" />}
-          className="self-center rounded-md bg-penn-red-900 px-12 py-5 font-semibold text-neutral-50"
-        >
-          Ver Todas
-        </Button>
+        <Link to={"/"}>
+          <Button
+            startContent={<Newspaper weight="fill" />}
+            className="rounded-md bg-penn-red-900 px-12 py-5 font-semibold text-neutral-50"
+          >
+            Ver Todas
+          </Button>
+        </Link>
       </div>
     </section>
   );

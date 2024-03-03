@@ -1,5 +1,6 @@
-import { Button, Card, CardFooter, Image, Link } from "@nextui-org/react";
+import { Button, Card, CardFooter, Image } from "@nextui-org/react";
 import { BookmarkSimple, CalendarBlank, Camera } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
 
 export function Eventos() {
   return (
@@ -7,7 +8,7 @@ export function Eventos() {
       id="eventos"
       className="flex min-h-svh items-center justify-center"
     >
-      <div className="container flex flex-col gap-10 p-4 py-20">
+      <div className="container flex flex-col items-center gap-10 p-4 py-20">
         <div className="cabecalho flex flex-col gap-2">
           <h6 className="text-center text-xs uppercase tracking-widest text-shark-700 md:text-sm lg:text-base">
             fique por dentro dos
@@ -19,7 +20,7 @@ export function Eventos() {
 
         <div className="ultimos-eventos flex items-center justify-center">
           <div className="grid gap-6 sm:grid-cols-3">
-            <Link href="#">
+            <Link to={"/"}>
               <Card
                 isPressable
                 isFooterBlurred
@@ -36,7 +37,7 @@ export function Eventos() {
                 <CardFooter className="absolute bottom-0 z-10 flex flex-col gap-1 border-t-1 border-zinc-100/50 bg-black/50">
                   <div className="flex w-full justify-between">
                     <Link
-                      href="#"
+                      to={"/"}
                       className="flex items-center justify-center gap-1 text-neutral-50"
                       color="foreground"
                     >
@@ -44,7 +45,7 @@ export function Eventos() {
                       <span className="text-tiny">10 Fev, 2024</span>
                     </Link>
                     <Link
-                      href="#"
+                      to={"/"}
                       className="flex items-center justify-center gap-1 text-neutral-50"
                       color="foreground"
                     >
@@ -58,7 +59,7 @@ export function Eventos() {
                 </CardFooter>
               </Card>
             </Link>
-            <Link href="#" className="hidden md:block">
+            <Link to={"/"} className="hidden md:block">
               <Card
                 isPressable
                 isFooterBlurred
@@ -75,7 +76,7 @@ export function Eventos() {
                 <CardFooter className="absolute bottom-0 z-10 flex flex-col gap-1 border-t-1 border-zinc-100/50 bg-black/50">
                   <div className="flex w-full justify-between">
                     <Link
-                      href="#"
+                      to={"/"}
                       className="flex items-center justify-center gap-1 text-neutral-50"
                       color="foreground"
                     >
@@ -83,7 +84,7 @@ export function Eventos() {
                       <span className="text-tiny">25 Nov, 2023</span>
                     </Link>
                     <Link
-                      href="#"
+                      to={"/"}
                       className="flex items-center justify-center gap-1 text-neutral-50"
                       color="foreground"
                     >
@@ -97,7 +98,7 @@ export function Eventos() {
                 </CardFooter>
               </Card>
             </Link>
-            <Link href="#" className="hidden md:block">
+            <Link to={"/"} className="hidden md:block">
               <Card
                 isPressable
                 isFooterBlurred
@@ -114,7 +115,7 @@ export function Eventos() {
                 <CardFooter className="absolute bottom-0 z-10 flex flex-col gap-1 border-t-1 border-zinc-100/50 bg-black/50">
                   <div className="flex w-full justify-between">
                     <Link
-                      href="#"
+                      to={"/"}
                       className="flex items-center justify-center gap-1 text-neutral-50"
                       color="foreground"
                     >
@@ -122,7 +123,7 @@ export function Eventos() {
                       <span className="text-tiny">10 Set, 2023</span>
                     </Link>
                     <Link
-                      href="#"
+                      to={"/"}
                       className="flex items-center justify-center gap-1 text-neutral-50"
                       color="foreground"
                     >
@@ -136,7 +137,7 @@ export function Eventos() {
                 </CardFooter>
               </Card>
             </Link>
-            <Link href="#" className="hidden xl:block">
+            <Link to={"/"} className="hidden xl:block">
               <Card
                 isPressable
                 isFooterBlurred
@@ -153,7 +154,7 @@ export function Eventos() {
                 <CardFooter className="absolute bottom-0 z-10 flex flex-col gap-1 border-t-1 border-zinc-100/50 bg-black/50">
                   <div className="flex w-full justify-between">
                     <Link
-                      href="#"
+                      to={"/"}
                       className="flex items-center justify-center gap-1 text-neutral-50"
                       color="foreground"
                     >
@@ -161,7 +162,7 @@ export function Eventos() {
                       <span className="text-tiny">02 Jul, 2023</span>
                     </Link>
                     <Link
-                      href="#"
+                      to={"/"}
                       className="flex items-center justify-center gap-1 text-neutral-50"
                       color="foreground"
                     >
@@ -175,7 +176,7 @@ export function Eventos() {
                 </CardFooter>
               </Card>
             </Link>
-            <Link href="#" className="hidden xl:block">
+            <Link to={"/"} className="hidden xl:block">
               <Card
                 isPressable
                 isFooterBlurred
@@ -192,7 +193,7 @@ export function Eventos() {
                 <CardFooter className="absolute bottom-0 z-10 flex flex-col gap-1 border-t-1 border-zinc-100/50 bg-black/50">
                   <div className="flex w-full justify-between">
                     <Link
-                      href="#"
+                      to={"/"}
                       className="flex items-center justify-center gap-1 text-neutral-50"
                       color="foreground"
                     >
@@ -200,7 +201,7 @@ export function Eventos() {
                       <span className="text-tiny">15 Mar, 2023</span>
                     </Link>
                     <Link
-                      href="#"
+                      to={"/"}
                       className="flex items-center justify-center gap-1 text-neutral-50"
                       color="foreground"
                     >
@@ -214,7 +215,7 @@ export function Eventos() {
                 </CardFooter>
               </Card>
             </Link>
-            <Link href="#" className="hidden xl:block">
+            <Link to={"/"} className="hidden xl:block">
               <Card
                 isPressable
                 isFooterBlurred
@@ -231,7 +232,7 @@ export function Eventos() {
                 <CardFooter className="absolute bottom-0 z-10 flex flex-col gap-1 border-t-1 border-zinc-100/50 bg-black/50">
                   <div className="flex w-full justify-between">
                     <Link
-                      href="#"
+                      to={"/"}
                       className="flex items-center justify-center gap-1 text-neutral-50"
                       color="foreground"
                     >
@@ -239,7 +240,7 @@ export function Eventos() {
                       <span className="text-tiny">01 Jan, 2023</span>
                     </Link>
                     <Link
-                      href="#"
+                      to={"/"}
                       className="flex items-center justify-center gap-1 text-neutral-50"
                       color="foreground"
                     >
@@ -256,13 +257,14 @@ export function Eventos() {
           </div>
         </div>
 
-        <Button
-          href="#"
-          startContent={<Camera weight="fill" />}
-          className="self-center rounded-md bg-penn-red-900 px-12 py-5 font-semibold text-neutral-50"
-        >
-          Eventos
-        </Button>
+        <Link to={"/"}>
+          <Button
+            startContent={<Camera weight="fill" />}
+            className="rounded-md bg-penn-red-900 px-12 py-5 font-semibold text-neutral-50"
+          >
+            Eventos
+          </Button>
+        </Link>
       </div>
     </section>
   );

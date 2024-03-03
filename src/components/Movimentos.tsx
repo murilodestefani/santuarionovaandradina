@@ -1,7 +1,6 @@
-import { Button, Card, Image, Link } from "@nextui-org/react";
-import {
-  MagnifyingGlass,
-} from "@phosphor-icons/react";
+import { Button, Card, Image } from "@nextui-org/react";
+import { MagnifyingGlass } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
 
 export function Movimentos() {
   return (
@@ -9,7 +8,7 @@ export function Movimentos() {
       id="movimentos"
       className="flex min-h-svh items-center justify-center"
     >
-      <div className="container flex flex-col gap-10 p-4 py-20">
+      <div className="container flex flex-col items-center gap-10 p-4 py-20">
         <div className="cabecalho flex flex-col gap-2">
           <h6 className="text-center text-xs uppercase tracking-widest text-shark-700 md:text-sm lg:text-base">
             conheça nossas
@@ -21,7 +20,7 @@ export function Movimentos() {
 
         <div className="flex items-center justify-center">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            <Link href="#" className="max-w-64 rounded-lg">
+            <Link to={"/"} className="max-w-64 rounded-lg">
               <Card className="flex flex-col items-center">
                 <Image
                   className="aspect-3/2 rounded-b-none border-b-4 border-penn-red-900"
@@ -41,7 +40,7 @@ export function Movimentos() {
                 </div>
               </Card>
             </Link>
-            <Link href="#" className="hidden max-w-64 rounded-lg md:block">
+            <Link to={"/"} className="hidden max-w-64 rounded-lg md:block">
               <Card className="flex flex-col items-center">
                 <Image
                   className="aspect-3/2 rounded-b-none border-b-4 border-penn-red-900"
@@ -61,7 +60,7 @@ export function Movimentos() {
                 </div>
               </Card>
             </Link>
-            <Link href="#" className="hidden max-w-64 rounded-lg lg:block">
+            <Link to={"/"} className="hidden max-w-64 rounded-lg lg:block">
               <Card className="flex flex-col items-center">
                 <Image
                   className="aspect-3/2 rounded-b-none border-b-4 border-penn-red-900"
@@ -81,7 +80,7 @@ export function Movimentos() {
                 </div>
               </Card>
             </Link>
-            <Link href="#" className="hidden max-w-64 rounded-lg xl:block">
+            <Link to={"/"} className="hidden max-w-64 rounded-lg xl:block">
               <Card className="flex flex-col items-center">
                 <Image
                   className="aspect-3/2 rounded-b-none border-b-4 border-penn-red-900"
@@ -104,13 +103,14 @@ export function Movimentos() {
           </div>
         </div>
 
-        <Button
-          href="#"
-          startContent={<MagnifyingGlass weight="fill" />}
-          className="self-center rounded-md bg-penn-red-900 px-12 py-5 font-semibold text-neutral-50"
-        >
-          Explore Mais
-        </Button>
+        <Link to={"/"}>
+          <Button
+            startContent={<MagnifyingGlass weight="fill" />}
+            className="self-center rounded-md bg-penn-red-900 px-12 py-5 font-semibold text-neutral-50"
+          >
+            Explore Mais
+          </Button>
+        </Link>
       </div>
     </section>
   );
