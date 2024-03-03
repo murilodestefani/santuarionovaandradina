@@ -14,8 +14,12 @@
     "@nextui-org/react": "^2.2.9",
     "@phosphor-icons/react": "^2.0.15",
     "framer-motion": "^11.0.5",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.2",
+    "sort-by": "^0.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",
