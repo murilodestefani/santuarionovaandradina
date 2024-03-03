@@ -24,9 +24,10 @@ export function Atalhos() {
             <Church className="size-8 text-penn-red-900 md:size-10 lg:size-12" />
           </Button>
           <span className="text-tiny font-bold text-neutral-50 md:text-sm lg:text-base">
-            <Link to={"/"}>Horário das Missas</Link>
+            Horário das Missas
           </span>
         </div>
+
         <div className="flex flex-col items-center gap-1">
           <Button
             href="#"
