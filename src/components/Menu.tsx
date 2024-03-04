@@ -271,7 +271,7 @@ export function Menu() {
           <Link to={"/login"}>
             <Button
               variant="ghost"
-              className="rounded-md bg-transparent px-12 py-5 font-semibold text-neutral-50"
+              className="rounded-md bg-transparent px-12 py-5 text-neutral-50"
             >
               Login
             </Button>
