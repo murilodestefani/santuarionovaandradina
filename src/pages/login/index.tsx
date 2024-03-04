@@ -9,7 +9,7 @@ export function Login() {
   const toggleVisibility = () => setIsVisible(!isVisible);
 
   return (
-    <section id="Login" className="flex h-svh w-svw">
+    <section id="Login" className="min-w-svw flex min-h-svh">
       <div className="hidden w-1/2 bg-[url('./assets/img/MDP04823.jpg')] bg-cover bg-center bg-no-repeat xl:block"></div>
       <div className="container flex flex-col justify-center gap-10 p-4 xl:w-1/2 xl:p-10">
         <Link to={"/"} className="flex flex-col items-center">

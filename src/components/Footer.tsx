@@ -8,9 +8,9 @@ import {
 import Logo from "../assets/img/logo.png";
 import { Link } from "react-router-dom";
 
-export function Rodape() {
+export function Footer() {
   return (
-    <footer id="rodape" className="bg-penn-red-900 py-6">
+    <footer id="footer" className="bg-penn-red-900 py-6">
       <div className="container flex flex-col items-center gap-6">
         <Link to={"/"} className="flex flex-col items-center">
           <Image src={Logo} />

@@ -62,6 +62,29 @@ export default {
   },
   darkMode: "class",
   plugins: [
-    nextui(),
+    nextui({
+      prefix: "nextui", // prefix for themes variables
+      addCommonColors: false, // override common colors (e.g. "blue", "green", "pink").
+      defaultTheme: "light", // default theme from the themes object
+      defaultExtendTheme: "light", // default theme to extend on custom themes
+      layout: {}, // common layout tokens (applied to all themes)
+      themes: {
+        light: {
+          layout: {}, // light theme layout tokens
+          colors: {
+            primary: {
+              DEFAULT: "#9F0000",
+              foreground: "#000000",
+            },
+            focus: "#9f0000",
+          }, // light theme colors
+        },
+        dark: {
+          layout: {}, // dark theme layout tokens
+          colors: {}, // dark theme colors
+        },
+        // ... custom themes
+      },
+    }),
   ],
 };

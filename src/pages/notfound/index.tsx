@@ -1,13 +1,13 @@
 import { Button } from "@nextui-org/react";
-import { Menu } from "../../components/Menu";
-import { Rodape } from "../../components/Rodape";
+import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer";
 import { Link } from "react-router-dom";
 import { CaretCircleLeft } from "@phosphor-icons/react";
 
 export function NotFound() {
   return (
     <>
-      <Menu />
+      <Header />
       <section
         id="notfound"
         className="-mt-16 flex h-svh w-svw items-center justify-center bg-neutral-400"
@@ -24,7 +24,7 @@ export function NotFound() {
           </Link>
         </div>
       </section>
-      <Rodape />
+      <Footer />
     </>
   );
 }

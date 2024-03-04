@@ -1,4 +1,4 @@
-import { Menu } from "../../components/Menu";
+import { Header } from "../../components/Header";
 import { Hero } from "../../components/Hero";
 import { Eventos } from "../../components/Eventos";
 import { Slider } from "../../components/Slider";
@@ -8,12 +8,12 @@ import { Movimentos } from "../../components/Movimentos";
 import { Video } from "../../components/Video";
 import { Oracao } from "../../components/Oracao";
 import { Instagram } from "../../components/Instagram";
-import { Rodape } from "../../components/Rodape";
+import { Footer } from "../../components/Footer";
 
 export function Home() {
   return (
     <>
-      <Menu />
+      <Header />
       <Hero />
       <Eventos />
       <Slider />
@@ -23,7 +23,7 @@ export function Home() {
       <Video />
       <Oracao />
       <Instagram />
-      <Rodape />
+      <Footer />
     </>
   );
 }

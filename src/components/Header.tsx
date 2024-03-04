@@ -17,10 +17,13 @@ import { CaretDown } from "@phosphor-icons/react";
 import Logo from "../assets/img/logo.png";
 import { Link } from "react-router-dom";
 
-export function Menu() {
+export function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = [<Link to={"/login"}>Login</Link>];
+  const menuItems = [
+    <Link to={"/"}>Home</Link>,
+    <Link to={"/login"}>Login</Link>,
+  ];
 
   return (
     <Navbar
@@ -301,5 +304,3 @@ export function Menu() {
     </Navbar>
   );
 }
-
-export default Menu;
