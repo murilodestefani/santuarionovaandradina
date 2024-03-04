@@ -20,7 +20,7 @@ export function Noticias() {
 
         <div className="flex items-center justify-center">
           <div className="grid gap-6 sm:grid-cols-3">
-            <Link to={"/"} className="flex max-w-80 flex-col gap-1">
+            <Link to={"/"} className="relative flex max-w-80 flex-col gap-1">
               <Card isPressable isBlurred className="aspect-square">
                 <Image
                   isZoomed
@@ -51,7 +51,7 @@ export function Noticias() {
                 temporada especial.
               </p>
             </Link>
-            <Link to={"/"} className="hidden max-w-80 flex-col gap-1 md:block">
+            <Link to={"/"} className="relative hidden max-w-80 flex-col gap-1 md:block">
               <Card isPressable isBlurred className="aspect-square">
                 <Image
                   isZoomed
@@ -82,7 +82,7 @@ export function Noticias() {
                 palavras ressoaram profundamente em suas vidas.
               </p>
             </Link>
-            <Link to={"/"} className="hidden max-w-80 flex-col gap-1 md:block">
+            <Link to={"/"} className="relative hidden max-w-80 flex-col gap-1 md:block">
               <Card isPressable isBlurred className="aspect-square">
                 <Image
                   isZoomed
@@ -113,7 +113,7 @@ export function Noticias() {
                 desenvolvimento espiritual em um ambiente acolhedor.
               </p>
             </Link>
-            <Link to={"/"} className="hidden max-w-80 flex-col gap-1 xl:block">
+            <Link to={"/"} className="relative hidden max-w-80 flex-col gap-1 xl:block">
               <Card isPressable isBlurred className="aspect-square">
                 <Image
                   isZoomed
@@ -145,7 +145,7 @@ export function Noticias() {
                 valores fundamentais.
               </p>
             </Link>
-            <Link to={"/"} className="hidden max-w-80 flex-col gap-1 xl:block">
+            <Link to={"/"} className="relative hidden max-w-80 flex-col gap-1 xl:block">
               <Card isPressable isBlurred className="aspect-square">
                 <Image
                   isZoomed
@@ -177,7 +177,7 @@ export function Noticias() {
                 sociedade.
               </p>
             </Link>
-            <Link to={"/"} className="hidden max-w-80 flex-col gap-1 xl:block">
+            <Link to={"/"} className="relative hidden max-w-80 flex-col gap-1 xl:block">
               <Card isPressable isBlurred className="aspect-square">
                 <Image
                   isZoomed

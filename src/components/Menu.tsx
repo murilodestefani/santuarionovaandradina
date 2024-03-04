@@ -20,11 +20,7 @@ import { Link } from "react-router-dom";
 export function Menu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = [
-    <Link to={"/login"} color="foreground">
-      Login
-    </Link>,
-  ];
+  const menuItems = [<Link to={"/login"}>Login</Link>];
 
   return (
     <Navbar
@@ -272,15 +268,14 @@ export function Menu() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button
-            as={Link}
-            color="default"
-            to={"/login"}
-            radius="sm"
-            className="hidden border border-slate-50/20 bg-slate-50/10 text-base text-slate-50 hover:bg-transparent sm:flex"
-          >
-            Contato
-          </Button>
+          <Link to={"/login"}>
+            <Button
+              variant="ghost"
+              className="rounded-md bg-transparent px-12 py-5 font-semibold text-neutral-50"
+            >
+              Login
+            </Button>
+          </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
