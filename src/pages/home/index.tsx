@@ -21,7 +21,7 @@ import Feed04 from "../../assets/img/instagram/04.png";
 import Feed05 from "../../assets/img/instagram/05.png";
 import Feed06 from "../../assets/img/instagram/06.png";
 import Cover from "../../assets/img/video.jpg";
-import ImaculadoCoracao from "../../assets/img/imaculado.png"
+import ImaculadoCoracao from "../../assets/img/imaculado.png";
 
 export function Home() {
   return (
@@ -33,7 +33,7 @@ export function Home() {
         <div className="absolute z-20 h-full w-full bg-black/40"></div>
         <div className="absolute z-30 h-full w-full bg-gradient-to-t from-black/50"></div>
         <div className="container z-30 flex flex-col p-4">
-          <div className="flex flex-col gap-2 xl:max-w-xl">
+          <div className="flex flex-col gap-2 lg:max-w-xl">
             <h1 className="text-center text-5xl font-bold text-neutral-50 md:text-6xl xl:text-start xl:text-6xl">
               Bem-vindo ao Santuário
             </h1>
@@ -822,7 +822,7 @@ export function Home() {
                 30.08.2023
               </span>
               <a
-                className="flex gap-1 justify-center items-center text-tiny font-semibold uppercase text-shark-700 xl:text-sm"
+                className="flex items-center justify-center gap-1 text-tiny font-semibold uppercase text-shark-700 xl:text-sm"
                 href="#"
                 target="_blank"
               >
