@@ -29,7 +29,7 @@ export function Header() {
     <Navbar
       position="static"
       onMenuOpenChange={setIsMenuOpen}
-      className="relative z-50 bg-transparent"
+      className="relative z-50 bg-purple-600 bg-transparent"
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -271,12 +271,12 @@ export function Header() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Link to={"/login"}>
+          <Link to={"/"}>
             <Button
               variant="ghost"
-              className="rounded-md bg-transparent px-12 py-5 text-neutral-50"
+              className="hidden rounded-md bg-transparent px-12 py-5 text-neutral-50 md:flex"
             >
-              Login
+              Contato
             </Button>
           </Link>
         </NavbarItem>
