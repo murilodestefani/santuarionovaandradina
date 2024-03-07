@@ -4,23 +4,22 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "Category"
+    "displayName": "category"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
-      "required": true,
-      "unique": true
+      "required": true
     },
     "posts": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::post.post",
-      "inversedBy": "categories"
+      "mappedBy": "categories"
     }
   }
 }
