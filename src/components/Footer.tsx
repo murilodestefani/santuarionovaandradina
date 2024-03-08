@@ -24,37 +24,37 @@ export function Footer() {
         </Link>
         <div className="container flex flex-col gap-1 md:flex-row md:justify-center md:gap-6">
           <Link
-            className="justify-center text-tiny text-neutral-50 md:text-sm xl:text-base"
+            className="flex justify-center text-tiny text-neutral-50 md:text-sm xl:text-base"
             to={"/"}
           >
             Home
           </Link>
           <Link
-            className="justify-center text-tiny text-neutral-50 md:text-sm xl:text-base"
+            className="flex justify-center text-tiny text-neutral-50 md:text-sm xl:text-base"
             to={"/"}
           >
             Santuário
           </Link>
           <Link
-            className="justify-center text-tiny text-neutral-50 md:text-sm xl:text-base"
+            className="flex justify-center text-tiny text-neutral-50 md:text-sm xl:text-base"
             to={"/"}
           >
             Comunidade
           </Link>
           <Link
-            className="justify-center text-tiny text-neutral-50 md:text-sm xl:text-base"
+            className="flex justify-center text-tiny text-neutral-50 md:text-sm xl:text-base"
             to={"/"}
           >
             Galeria
           </Link>
           <Link
-            className="justify-center text-tiny text-neutral-50 md:text-sm xl:text-base"
+            className="flex justify-center text-tiny text-neutral-50 md:text-sm xl:text-base"
             to={"/"}
           >
             Eventos
           </Link>
           <Link
-            className="justify-center text-tiny text-neutral-50 md:text-sm xl:text-base"
+            className="flex justify-center text-tiny text-neutral-50 md:text-sm xl:text-base"
             to={"/"}
           >
             Devocional
