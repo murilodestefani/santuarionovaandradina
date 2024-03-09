@@ -22,10 +22,37 @@ import Feed06 from "../../assets/img/instagram/06.png";
 import Cover from "../../assets/img/video.jpg";
 import ImaculadoCoracao from "../../assets/img/imaculado.png";
 import Cabecalho from "../../components/Cabecalho";
-import CardEvento from "../../components/CardEvento";
-import CardNoticia from "../../components/CardNoticia";
+import CardEvent from "../../components/CardEvent";
+import CardPost from "../../components/CardPost";
 import CardMovimento from "../../components/CardMovimento";
 import { useState, useEffect } from "react";
+
+interface Event {
+  id: number;
+  attributes: {
+    cover: {
+      data: {
+        attributes: {
+          alternativeText: string;
+          formats: {
+            small: {
+              url: string;
+            };
+          };
+        };
+      };
+    };
+    title: string;
+    date: string;
+    categories: {
+      data: {
+        attributes: {
+          name: string;
+        };
+      };
+    };
+  };
+}
 
 interface Post {
   id: number;
@@ -35,7 +62,7 @@ interface Post {
         attributes: {
           alternativeText: string;
           formats: {
-            large: {
+            small: {
               url: string;
             };
           };
@@ -44,7 +71,6 @@ interface Post {
     };
     title: string;
     content: string;
-    date: string;
     categories: {
       data: {
         attributes: {
@@ -57,7 +83,15 @@ interface Post {
 
 export function Home() {
   const apiUrl = "http://localhost:1337";
+  const [events, setEvents] = useState<Event[]>([]);
   const [posts, setPosts] = useState<Post[]>([]);
+
+  useEffect(() => {
+    axios
+      .get(`${apiUrl}/api/events?populate=*`)
+      .then(({ data }) => setEvents(data.data))
+      .catch((error) => console.error("Erro ao carregar events:", error));
+  }, []);
 
   useEffect(() => {
     axios
@@ -111,13 +145,14 @@ export function Home() {
 
           <div className="ultimos-eventos flex items-center justify-center">
             <div className="grid gap-6 sm:grid-cols-3">
-              {posts.map(({ id, attributes }) => (
-                <CardEvento
+              {events.map(({ id, attributes }) => (
+                <CardEvent
                   key={id}
                   title={attributes.title}
                   date={attributes.date}
                   category="Teste"
-                  imgUrl={`${apiUrl}${attributes.cover.data.attributes.formats.large.url}`}
+                  imgUrl={`${apiUrl}${attributes.cover.data.attributes.formats.small.url}`}
+                  imgAlt={`${apiUrl}${attributes.cover.data.attributes.alternativeText}`}
                   link="/"
                 />
               ))}
@@ -158,48 +193,17 @@ export function Home() {
 
           <div className="flex items-center justify-center">
             <div className="grid gap-6 sm:grid-cols-3">
-              <CardNoticia
-                title="Comunidade se une para Celebrações"
-                content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
-                category="Celebrações"
-                imgUrl="https://source.unsplash.com/random/?party"
-                link="/"
-              />
-              <CardNoticia
-                title="Mensagem Pastoral Toca Corações Abatidos"
-                content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
-                category="Mensagens"
-                imgUrl="https://source.unsplash.com/random/?message"
-                link="/"
-              />
-              <CardNoticia
-                title="Programas Inovadores Fortalecem Envolvimento Jovem"
-                content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
-                category="Juventude"
-                imgUrl="https://source.unsplash.com/random/?young"
-                link="/"
-              />
-              <CardNoticia
-                title="Momentos Profundos de Reflexão e Renovação"
-                content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
-                category="Espiritualidade"
-                imgUrl="https://source.unsplash.com/random/?heaven"
-                link="/"
-              />
-              <CardNoticia
-                title="Projetos Locais Fortalecem Vínculos Fraternos"
-                content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
-                category="Comunidade"
-                imgUrl="https://source.unsplash.com/random/?help"
-                link="/"
-              />
-              <CardNoticia
-                title="Natal: Momentos de Reflexão e Alegria"
-                content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
-                category="Natal"
-                imgUrl="https://source.unsplash.com/random/?xmas"
-                link="/"
-              />
+            {posts.map(({ id, attributes }) => (
+                <CardPost
+                  key={id}
+                  title={attributes.title}
+                  content={attributes.content}
+                  category="Teste"
+                  imgUrl={`${apiUrl}${attributes.cover.data.attributes.formats.small.url}`}
+                  imgAlt={`${apiUrl}${attributes.cover.data.attributes.alternativeText}`}
+                  link="/"
+                />
+              ))}
             </div>
           </div>
           <Link to={"/"}>

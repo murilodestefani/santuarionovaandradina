@@ -18,9 +18,15 @@
     },
     "posts": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::post.post",
-      "mappedBy": "categories"
+      "mappedBy": "category"
+    },
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event",
+      "mappedBy": "category"
     }
   }
 }

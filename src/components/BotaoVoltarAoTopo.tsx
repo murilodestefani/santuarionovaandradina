@@ -31,7 +31,7 @@ const BotaoVoltarAoTopo: React.FC = () => {
     <button
       className={`fixed bottom-4 right-4 ${
         isVisible ? "opacity-100" : "opacity-0"
-      } rounded-full bg-lion-500 p-4 shadow-md text-white sh transition-opacity duration-300 ease-in-out focus:outline-none`}
+      } sh z-50 rounded-full bg-lion-500 p-4 text-white shadow-md transition-opacity duration-300 ease-in-out focus:outline-none`}
       onClick={handleScrollToTop}
     >
       <CaretUp className="text-xl text-neutral-50" />

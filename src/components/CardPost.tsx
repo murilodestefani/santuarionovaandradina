@@ -2,19 +2,21 @@ import { Card, Image } from "@nextui-org/react";
 import React from "react";
 import { Link } from "react-router-dom";
 
-interface CardNoticiaProps {
+interface CardPostProps {
   title: string;
   content: string;
   category: string;
   imgUrl: string;
+  imgAlt: string;
   link: string;
 }
 
-const CardNoticia: React.FC<CardNoticiaProps> = ({
+const CardPost: React.FC<CardPostProps> = ({
   title,
   content,
   category,
   imgUrl,
+  imgAlt,
   link,
 }) => {
   return (
@@ -23,12 +25,13 @@ const CardNoticia: React.FC<CardNoticiaProps> = ({
         <Image
           isZoomed
           removeWrapper
-          className="z-0 h-full w-full object-cover"
+          className="z-0 h-full w-full object-cover shadow-inner"
           width="100%"
           src={imgUrl}
+          alt={imgAlt}
         />
       </Card>
-      <span className="absolute right-4 top-4 rounded-md bg-black/25 px-3 py-1 text-xs font-bold uppercase text-neutral-50 shadow-md">
+      <span className="absolute right-4 top-4 rounded-md border-2 border-neutral-50/25 bg-black/25 px-3 py-1 text-xs font-bold uppercase text-neutral-50">
         {category}
       </span>
       <h4 className="mt-1 line-clamp-2 text-lg font-bold text-shark-950 md:text-base lg:text-lg">
@@ -41,4 +44,4 @@ const CardNoticia: React.FC<CardNoticiaProps> = ({
   );
 };
 
-export default CardNoticia;
+export default CardPost;
