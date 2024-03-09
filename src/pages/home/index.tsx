@@ -1,7 +1,5 @@
-import { Button, Card, CardFooter, Image } from "@nextui-org/react";
+import { Button, Card, Image } from "@nextui-org/react";
 import {
-  CalendarBlank,
-  BookmarkSimple,
   Camera,
   Newspaper,
   BookOpenText,
@@ -22,6 +20,10 @@ import Feed05 from "../../assets/img/instagram/05.png";
 import Feed06 from "../../assets/img/instagram/06.png";
 import Cover from "../../assets/img/video.jpg";
 import ImaculadoCoracao from "../../assets/img/imaculado.png";
+import Cabecalho from "../../components/Cabecalho";
+import CardEvento from "../../components/CardEvento";
+import CardNoticia from "../../components/CardNoticia";
+import CardMovimento from "../../components/CardMovimento";
 
 export function Home() {
   return (
@@ -65,287 +67,52 @@ export function Home() {
         className="flex min-h-svh items-center justify-center"
       >
         <div className="container flex flex-col items-center gap-10 p-4 py-20">
-          <div className="cabecalho flex flex-col gap-2">
-            <h6 className="text-center text-xs uppercase tracking-widest text-shark-700 md:text-sm lg:text-base">
-              fique por dentro dos
-            </h6>
-            <h2 className="text-center text-5xl font-bold text-shark-950">
-              Últimos Eventos
-            </h2>
-          </div>
+          <Cabecalho subtitle="fique por dentro dos" title="Últimos Eventos" />
 
           <div className="ultimos-eventos flex items-center justify-center">
             <div className="grid gap-6 sm:grid-cols-3">
-              <Link to={"/"}>
-                <Card
-                  isPressable
-                  isFooterBlurred
-                  isBlurred
-                  className="aspect-2/3 max-w-80"
-                >
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    className="z-0 h-full w-full object-cover"
-                    width="100%"
-                    src="https://source.unsplash.com/random/?jesus"
-                  />
-                  <CardFooter className="absolute bottom-0 z-10 flex flex-col gap-1 border-t-1 border-zinc-100/50 bg-black/50">
-                    <div className="flex w-full justify-between">
-                      <Link
-                        to={"/"}
-                        className="flex items-center justify-center gap-1 text-neutral-50"
-                        color="foreground"
-                      >
-                        <CalendarBlank
-                          className="text-lion-500"
-                          weight="fill"
-                        />
-                        <span className="text-tiny">10 Fev, 2024</span>
-                      </Link>
-                      <Link
-                        to={"/"}
-                        className="flex items-center justify-center gap-1 text-neutral-50"
-                        color="foreground"
-                      >
-                        <BookmarkSimple
-                          className="text-lion-500"
-                          weight="fill"
-                        />
-                        <span className="text-tiny">Anúncios</span>
-                      </Link>
-                    </div>
-                    <h2 className="line-clamp-2 text-start font-bold text-neutral-50">
-                      Novidades do Ano: Atualizações e Planejamento
-                    </h2>
-                  </CardFooter>
-                </Card>
-              </Link>
-              <Link to={"/"} className="hidden md:block">
-                <Card
-                  isPressable
-                  isFooterBlurred
-                  isBlurred
-                  className="aspect-2/3 max-w-80"
-                >
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    className="z-0 h-full w-full object-cover"
-                    width="100%"
-                    src="https://source.unsplash.com/random/?bible"
-                  />
-                  <CardFooter className="absolute bottom-0 z-10 flex flex-col gap-1 border-t-1 border-zinc-100/50 bg-black/50">
-                    <div className="flex w-full justify-between">
-                      <Link
-                        to={"/"}
-                        className="flex items-center justify-center gap-1 text-neutral-50"
-                        color="foreground"
-                      >
-                        <CalendarBlank
-                          className="text-lion-500"
-                          weight="fill"
-                        />
-                        <span className="text-tiny">25 Nov, 2023</span>
-                      </Link>
-                      <Link
-                        to={"/"}
-                        className="flex items-center justify-center gap-1 text-neutral-50"
-                        color="foreground"
-                      >
-                        <BookmarkSimple
-                          className="text-lion-500"
-                          weight="fill"
-                        />
-                        <span className="text-tiny">Mensagens</span>
-                      </Link>
-                    </div>
-                    <h2 className="line-clamp-2 text-start font-bold text-neutral-50">
-                      Gratidão em Ação: Mensagem de Agradecimento
-                    </h2>
-                  </CardFooter>
-                </Card>
-              </Link>
-              <Link to={"/"} className="hidden md:block">
-                <Card
-                  isPressable
-                  isFooterBlurred
-                  isBlurred
-                  className="aspect-2/3 max-w-80"
-                >
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    className="z-0 h-full w-full object-cover"
-                    width="100%"
-                    src="https://source.unsplash.com/random/?pray"
-                  />
-                  <CardFooter className="absolute bottom-0 z-10 flex flex-col gap-1 border-t-1 border-zinc-100/50 bg-black/50">
-                    <div className="flex w-full justify-between">
-                      <Link
-                        to={"/"}
-                        className="flex items-center justify-center gap-1 text-neutral-50"
-                        color="foreground"
-                      >
-                        <CalendarBlank
-                          className="text-lion-500"
-                          weight="fill"
-                        />
-                        <span className="text-tiny">10 Set, 2023</span>
-                      </Link>
-                      <Link
-                        to={"/"}
-                        className="flex items-center justify-center gap-1 text-neutral-50"
-                        color="foreground"
-                      >
-                        <BookmarkSimple
-                          className="text-lion-500"
-                          weight="fill"
-                        />
-                        <span className="text-tiny">Atividades</span>
-                      </Link>
-                    </div>
-                    <h2 className="line-clamp-2 text-start font-bold text-neutral-50">
-                      Atividades ao Ar Livre: Conectando-se com a Natureza
-                    </h2>
-                  </CardFooter>
-                </Card>
-              </Link>
-              <Link to={"/"} className="hidden xl:block">
-                <Card
-                  isPressable
-                  isFooterBlurred
-                  isBlurred
-                  className="aspect-2/3 max-w-80 xl:block"
-                >
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    className="z-0 h-full w-full object-cover"
-                    width="100%"
-                    src="https://source.unsplash.com/random/?faith"
-                  />
-                  <CardFooter className="absolute bottom-0 z-10 flex flex-col gap-1 border-t-1 border-zinc-100/50 bg-black/50">
-                    <div className="flex w-full justify-between">
-                      <Link
-                        to={"/"}
-                        className="flex items-center justify-center gap-1 text-neutral-50"
-                        color="foreground"
-                      >
-                        <CalendarBlank
-                          className="text-lion-500"
-                          weight="fill"
-                        />
-                        <span className="text-tiny">02 Jul, 2023</span>
-                      </Link>
-                      <Link
-                        to={"/"}
-                        className="flex items-center justify-center gap-1 text-neutral-50"
-                        color="foreground"
-                      >
-                        <BookmarkSimple
-                          className="text-lion-500"
-                          weight="fill"
-                        />
-                        <span className="text-tiny">Espiritualidade</span>
-                      </Link>
-                    </div>
-                    <h2 className="line-clamp-2 text-start font-bold text-neutral-50">
-                      Jornada de Reflexão: Fortalecendo a Fé
-                    </h2>
-                  </CardFooter>
-                </Card>
-              </Link>
-              <Link to={"/"} className="hidden xl:block">
-                <Card
-                  isPressable
-                  isFooterBlurred
-                  isBlurred
-                  className="aspect-2/3 max-w-80 xl:block"
-                >
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    className="z-0 h-full w-full object-cover"
-                    width="100%"
-                    src="https://source.unsplash.com/random/?christ"
-                  />
-                  <CardFooter className="absolute bottom-0 z-10 flex flex-col gap-1 border-t-1 border-zinc-100/50 bg-black/50">
-                    <div className="flex w-full justify-between">
-                      <Link
-                        to={"/"}
-                        className="flex items-center justify-center gap-1 text-neutral-50"
-                        color="foreground"
-                      >
-                        <CalendarBlank
-                          className="text-lion-500"
-                          weight="fill"
-                        />
-                        <span className="text-tiny">15 Mar, 2023</span>
-                      </Link>
-                      <Link
-                        to={"/"}
-                        className="flex items-center justify-center gap-1 text-neutral-50"
-                        color="foreground"
-                      >
-                        <BookmarkSimple
-                          className="text-lion-500"
-                          weight="fill"
-                        />
-                        <span className="text-tiny">Comunidade</span>
-                      </Link>
-                    </div>
-                    <h2 className="line-clamp-2 text-start font-bold text-neutral-50">
-                      Envolvimento Comunitário: Projetos em Andamento
-                    </h2>
-                  </CardFooter>
-                </Card>
-              </Link>
-              <Link to={"/"} className="hidden xl:block">
-                <Card
-                  isPressable
-                  isFooterBlurred
-                  isBlurred
-                  className="aspect-2/3 max-w-80 xl:block"
-                >
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    className="z-0 h-full w-full object-cover"
-                    width="100%"
-                    src="https://source.unsplash.com/random/?heaven"
-                  />
-                  <CardFooter className="absolute bottom-0 z-10 flex flex-col gap-1 border-t-1 border-zinc-100/50 bg-black/50">
-                    <div className="flex w-full justify-between">
-                      <Link
-                        to={"/"}
-                        className="flex items-center justify-center gap-1 text-neutral-50"
-                        color="foreground"
-                      >
-                        <CalendarBlank
-                          className="text-lion-500"
-                          weight="fill"
-                        />
-                        <span className="text-tiny">01 Jan, 2023</span>
-                      </Link>
-                      <Link
-                        to={"/"}
-                        className="flex items-center justify-center gap-1 text-neutral-50"
-                        color="foreground"
-                      >
-                        <BookmarkSimple
-                          className="text-lion-500"
-                          weight="fill"
-                        />
-                        <span className="text-tiny">Eventos</span>
-                      </Link>
-                    </div>
-                    <h2 className="line-clamp-2 text-start font-bold text-neutral-50">
-                      Início do Ano: Celebração e Renovação Espiritual
-                    </h2>
-                  </CardFooter>
-                </Card>
-              </Link>
+              <CardEvento
+                title="Reflexões Espirituais: Encontre Paz Interior na Oração Diária"
+                date="08 Mar, 2024"
+                category="Eventos"
+                imgUrl="https://source.unsplash.com/random/?jesus"
+                link="/"
+              />
+              <CardEvento
+                title="Celebrações Litúrgicas: Conectando Fé e Comunidade Amorosa"
+                date="13 Fev, 2024"
+                category="Dicas"
+                imgUrl="https://source.unsplash.com/random/?bible"
+                link="/"
+              />
+              <CardEvento
+                title="Mensagens do Evangelho: Orientações para uma Vida Abençoada"
+                date="27 Jan, 2024"
+                category="Entretenimento"
+                imgUrl="https://source.unsplash.com/random/?pray"
+                link="/"
+              />
+              <CardEvento
+                title="Testemunhos de Fé: Experiências que Fortalecem o Coração"
+                date="02 Dez, 2023"
+                category="Cultura"
+                imgUrl="https://source.unsplash.com/random/?faith"
+                link="/"
+              />
+              <CardEvento
+                title="Santos e Devoções: Inspirando-se nos Exemplos Divinos"
+                date="29 Nov, 2023"
+                category="Tecnologia"
+                imgUrl="https://source.unsplash.com/random/?christ"
+                link="/"
+              />
+              <CardEvento
+                title="Serviço Voluntário: A Caridade que Transforma Vidas"
+                date="17 Out, 2023"
+                category="Educação"
+                imgUrl="https://source.unsplash.com/random/?heaven"
+                link="/"
+              />
             </div>
           </div>
 
@@ -378,221 +145,52 @@ export function Home() {
         className="flex min-h-svh items-center justify-center"
       >
         <div className="container flex flex-col items-center gap-10 p-4 py-20">
-          <div className="cabecalho flex flex-col gap-2">
-            <h6 className="text-center text-xs uppercase tracking-widest text-shark-700 md:text-sm lg:text-base">
-              acompanhe as
-            </h6>
-            <h2 className="text-center text-5xl font-bold text-shark-950">
-              Notícias do Santuário
-            </h2>
-          </div>
+          <Cabecalho subtitle="acompanhe as" title="Notícias do Santuário" />
 
           <div className="flex items-center justify-center">
             <div className="grid gap-6 sm:grid-cols-3">
-              <Link to={"/"} className="relative flex max-w-80 flex-col gap-1">
-                <Card isPressable isBlurred className="aspect-square">
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    className="z-0 h-full w-full object-cover"
-                    width="100%"
-                    src="https://source.unsplash.com/random/?celebration"
-                  />
-                </Card>
-                <Link
-                  to={"/"}
-                  className="absolute right-4 top-4 rounded-md bg-neutral-50/20 p-1 text-xs font-bold uppercase text-neutral-50"
-                >
-                  Celebrações
-                </Link>
-                <Link to={"/"} className="self-start text-tiny text-shark-300">
-                  01.12.2024
-                </Link>
-                <h4 className="line-clamp-2 text-lg font-bold text-shark-950 md:text-base lg:text-lg">
-                  Comunidade se une para Celebrações Festivas
-                </h4>
-                <p className="line-clamp-5 text-justify text-xs text-shark-700">
-                  A igreja está vibrante com atividades natalinas, desde corais
-                  até eventos beneficentes. A decoração festiva e a atmosfera
-                  acolhedora antecipam celebrações memoráveis. A comunidade se
-                  une para celebrar não apenas o significado espiritual do
-                  Natal, mas também para compartilhar a alegria e a generosidade
-                  nesta temporada especial.
-                </p>
-              </Link>
-              <Link
-                to={"/"}
-                className="relative hidden max-w-80 flex-col gap-1 md:block"
-              >
-                <Card isPressable isBlurred className="aspect-square">
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    className="z-0 h-full w-full object-cover"
-                    width="100%"
-                    src="https://source.unsplash.com/random/?message"
-                  />
-                </Card>
-                <Link
-                  to={"/"}
-                  className="absolute right-4 top-4 rounded-md bg-neutral-50/20 p-1 text-xs font-bold uppercase text-neutral-50"
-                >
-                  Mensagem
-                </Link>
-                <Link to={"/"} className="self-start text-tiny text-shark-300">
-                  20.08.2024
-                </Link>
-                <h4 className="line-clamp-2 text-lg font-bold text-shark-950 md:text-base lg:text-lg">
-                  Mensagem Pastoral Toca Corações Abatidos
-                </h4>
-                <p className="line-clamp-5 text-justify text-xs text-shark-700">
-                  A mensagem pastoral recente trouxe conforto e esperança,
-                  abordando desafios enfrentados pela comunidade. O pastor
-                  compartilhou reflexões edificantes, encorajando a confiança na
-                  fé e a perseverança em tempos difíceis. Membros expressaram
-                  gratidão pela orientação espiritual, ressaltando como as
-                  palavras ressoaram profundamente em suas vidas.
-                </p>
-              </Link>
-              <Link
-                to={"/"}
-                className="relative hidden max-w-80 flex-col gap-1 md:block"
-              >
-                <Card isPressable isBlurred className="aspect-square">
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    className="z-0 h-full w-full object-cover"
-                    width="100%"
-                    src="https://source.unsplash.com/random/?youth"
-                  />
-                </Card>
-                <Link
-                  to={"/"}
-                  className="absolute right-4 top-4 rounded-md bg-neutral-50/20 p-1 text-xs font-bold uppercase text-neutral-50"
-                >
-                  Juventude
-                </Link>
-                <Link to={"/"} className="self-start text-tiny text-shark-300">
-                  05.09.2024
-                </Link>
-                <h4 className="line-clamp-2 text-lg font-bold text-shark-950 md:text-base lg:text-lg">
-                  Programas Inovadores Fortalecem Envolvimento Jovem
-                </h4>
-                <p className="line-clamp-5 text-justify text-xs text-shark-700">
-                  A igreja lançou iniciativas emocionantes para envolver a
-                  juventude, incluindo programas educativos, atividades
-                  recreativas e grupos de discussão. A resposta entusiasmada dos
-                  jovens destaca a importância de proporcionar oportunidades
-                  significativas de participação, promovendo a conexão e o
-                  desenvolvimento espiritual em um ambiente acolhedor.
-                </p>
-              </Link>
-              <Link
-                to={"/"}
-                className="relative hidden max-w-80 flex-col gap-1 xl:block"
-              >
-                <Card isPressable isBlurred className="aspect-square">
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    className="z-0 h-full w-full object-cover"
-                    width="100%"
-                    src="https://source.unsplash.com/random/?spirituality"
-                  />
-                </Card>
-                <Link
-                  to={"/"}
-                  className="absolute right-4 top-4 rounded-md bg-neutral-50/20 p-1 text-xs font-bold uppercase text-neutral-50"
-                >
-                  Espiritualidade
-                </Link>
-                <Link to={"/"} className="self-start text-tiny text-shark-300">
-                  15.06.2024
-                </Link>
-                <h4 className="line-clamp-2 text-lg font-bold text-shark-950 md:text-base lg:text-lg">
-                  Momentos Profundos de Reflexão e Renovação
-                </h4>
-                <p className="line-clamp-5 text-justify text-xs text-shark-700">
-                  Participantes do retiro experimentaram dias de tranquilidade e
-                  introspecção, mergulhando em práticas espirituais que
-                  fortaleceram sua conexão com o divino. Palestras
-                  esclarecedoras, momentos de oração e meditação guiada criaram
-                  um ambiente propício para o crescimento espiritual. A jornada
-                  culminou em um profundo senso de renovação e um compromisso
-                  renovado com valores fundamentais.
-                </p>
-              </Link>
-              <Link
-                to={"/"}
-                className="relative hidden max-w-80 flex-col gap-1 xl:block"
-              >
-                <Card isPressable isBlurred className="aspect-square">
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    className="z-0 h-full w-full object-cover"
-                    width="100%"
-                    src="https://source.unsplash.com/random/?community"
-                  />
-                </Card>
-                <Link
-                  to={"/"}
-                  className="absolute right-4 top-4 rounded-md bg-neutral-50/20 p-1 text-xs font-bold uppercase text-neutral-50"
-                >
-                  Comunidade
-                </Link>
-                <Link to={"/"} className="self-start text-tiny text-shark-300">
-                  05.02.2024
-                </Link>
-                <h4 className="line-clamp-2 text-lg font-bold text-shark-950 md:text-base lg:text-lg">
-                  Projetos Locais Fortalecem Vínculos Fraternos
-                </h4>
-                <p className="line-clamp-5 text-justify text-xs text-shark-700">
-                  A igreja lançou iniciativas comunitárias locais, desde grupos
-                  de apoio até eventos sociais, fortalecendo laços dentro e fora
-                  da congregação. Esses esforços visam promover um senso de
-                  comunidade mais amplo e solidificar o compromisso com valores
-                  compartilhados. Membros expressaram gratidão pela oportunidade
-                  de se envolverem ativamente em projetos que beneficiam a
-                  sociedade.
-                </p>
-              </Link>
-              <Link
-                to={"/"}
-                className="relative hidden max-w-80 flex-col gap-1 xl:block"
-              >
-                <Card isPressable isBlurred className="aspect-square">
-                  <Image
-                    isZoomed
-                    removeWrapper
-                    className="z-0 h-full w-full object-cover"
-                    width="100%"
-                    src="https://source.unsplash.com/random/?christmas"
-                  />
-                </Card>
-                <Link
-                  to={"/"}
-                  className="absolute right-4 top-4 rounded-md bg-neutral-50/20 p-1 text-xs font-bold uppercase text-neutral-50"
-                >
-                  Natal
-                </Link>
-                <Link to={"/"} className="self-start text-tiny text-shark-300">
-                  25.12.2023
-                </Link>
-                <h4 className="line-clamp-2 text-lg font-bold text-shark-950 md:text-base lg:text-lg">
-                  Natal: Momentos de Reflexão e Alegria
-                </h4>
-                <p className="line-clamp-5 text-justify text-xs text-shark-700">
-                  A celebração de Natal reuniu a comunidade para momentos de
-                  reflexão, adoração e alegria. Atividades especiais, música
-                  festiva e uma mensagem inspiradora foram destaque do evento,
-                  criando um ambiente acolhedor e espiritualmente enriquecedor.
-                  Membros compartilharam a alegria do Natal e agradeceram pela
-                  oportunidade de celebrar juntos como uma grande família
-                  espiritual.
-                </p>
-              </Link>
+              <CardNoticia
+                title="Comunidade se une para Celebrações"
+                content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
+                category="Celebrações"
+                imgUrl="https://source.unsplash.com/random/?party"
+                link="/"
+              />
+              <CardNoticia
+                title="Mensagem Pastoral Toca Corações Abatidos"
+                content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
+                category="Mensagens"
+                imgUrl="https://source.unsplash.com/random/?message"
+                link="/"
+              />
+              <CardNoticia
+                title="Programas Inovadores Fortalecem Envolvimento Jovem"
+                content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
+                category="Juventude"
+                imgUrl="https://source.unsplash.com/random/?young"
+                link="/"
+              />
+              <CardNoticia
+                title="Momentos Profundos de Reflexão e Renovação"
+                content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
+                category="Espiritualidade"
+                imgUrl="https://source.unsplash.com/random/?heaven"
+                link="/"
+              />
+              <CardNoticia
+                title="Projetos Locais Fortalecem Vínculos Fraternos"
+                content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
+                category="Comunidade"
+                imgUrl="https://source.unsplash.com/random/?help"
+                link="/"
+              />
+              <CardNoticia
+                title="Natal: Momentos de Reflexão e Alegria"
+                content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
+                category="Natal"
+                imgUrl="https://source.unsplash.com/random/?xmas"
+                link="/"
+              />
             </div>
           </div>
           <Link to={"/"}>
@@ -696,98 +294,40 @@ export function Home() {
         className="flex min-h-svh items-center justify-center"
       >
         <div className="container flex flex-col items-center gap-10 p-4 py-20">
-          <div className="cabecalho flex flex-col gap-2">
-            <h6 className="text-center text-xs uppercase tracking-widest text-shark-700 md:text-sm lg:text-base">
-              conheça nossas
-            </h6>
-            <h2 className="text-center text-5xl font-bold text-shark-950">
-              Pastorais, Movimentos e Serviços
-            </h2>
-          </div>
+          <Cabecalho
+            subtitle="conheça nossas"
+            title="Pastorais, Movimentos e Serviços"
+          />
 
           <div className="flex items-center justify-center">
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              <Link to={"/"} className="max-w-64 rounded-lg">
-                <Card className="flex flex-col items-center">
-                  <Image
-                    className="aspect-3/2 rounded-b-none border-b-4 border-penn-red-900"
-                    removeWrapper
-                    src="https://source.unsplash.com/random/?random-landscape-oriented-a"
-                  />
-                  <div className="p flex flex-col items-center gap-1 p-4">
-                    <h4 className="line-clamp-2 text-lg font-bold text-penn-red-900 md:text-base lg:text-lg">
-                      Pastoral da Catequese
-                    </h4>
-                    <p className="line-clamp-5 text-center text-xs text-shark-700">
-                      Venha fazer parte desta experiência de crescimento
+              <CardMovimento
+                title="Pastoral da Catequese"
+                text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+                imgUrl="https://source.unsplash.com/random/?random-landscape-oriented-a"
+                link="/"
+              />
+              <CardMovimento
+                title="Pastoral do Dizimo"
+                text="Venha fazer parte desta experiência de crescimento
                       espiritual, onde a educação religiosa se une à comunhão e
                       ao serviço à comunidade. Através da catequese,
-                      fortalecemos nossa ligação com Deus e uns com os outros.
-                    </p>
-                  </div>
-                </Card>
-              </Link>
-              <Link to={"/"} className="hidden max-w-64 rounded-lg md:block">
-                <Card className="flex flex-col items-center">
-                  <Image
-                    className="aspect-3/2 rounded-b-none border-b-4 border-penn-red-900"
-                    removeWrapper
-                    src="https://source.unsplash.com/random/?random-landscape-oriented-b"
-                  />
-                  <div className="p flex flex-col items-center gap-1 p-4">
-                    <h4 className="line-clamp-2 text-lg font-bold text-penn-red-900 md:text-base lg:text-lg">
-                      Pastoral do Dizimo
-                    </h4>
-                    <p className="line-clamp-5 text-center text-xs text-shark-700">
-                      É através do seu apoio e contribuição que conseguimos
-                      realizar obras que fazem a diferença em nossas vidas e na
-                      comunidade. Junte-se a nós nessa jornada de partilha e
-                      fortaleça a nossa missão de amor e serviço.
-                    </p>
-                  </div>
-                </Card>
-              </Link>
-              <Link to={"/"} className="hidden max-w-64 rounded-lg lg:block">
-                <Card className="flex flex-col items-center">
-                  <Image
-                    className="aspect-3/2 rounded-b-none border-b-4 border-penn-red-900"
-                    removeWrapper
-                    src="https://source.unsplash.com/random/?random-landscape-oriented-c"
-                  />
-                  <div className="p flex flex-col items-center gap-1 p-4">
-                    <h4 className="line-clamp-2 text-lg font-bold text-penn-red-900 md:text-base lg:text-lg">
-                      Renovação Carismática
-                    </h4>
-                    <p className="line-clamp-5 text-center text-xs text-shark-700">
-                      Junte-se a nós todos os domingos para uma experiência
-                      espiritual profunda e revigorante na Renovação Carismática
-                      da nossa igreja. Descubra o poder da oração, louvor e
-                      adoração enquanto nos conectamos com a presença divina.
-                    </p>
-                  </div>
-                </Card>
-              </Link>
-              <Link to={"/"} className="hidden max-w-64 rounded-lg xl:block">
-                <Card className="flex flex-col items-center">
-                  <Image
-                    className="aspect-3/2 rounded-b-none border-b-4 border-penn-red-900"
-                    removeWrapper
-                    src="https://source.unsplash.com/random/?random-landscape-oriented-d"
-                  />
-                  <div className="p flex flex-col items-center gap-1 p-4">
-                    <h4 className="line-clamp-2 text-lg font-bold text-penn-red-900 md:text-base lg:text-lg">
-                      ECC
-                    </h4>
-                    <p className="line-clamp-5 text-center text-xs text-shark-700">
-                      Junte-se a nós no ECC, uma jornada de amor e fé que
-                      fortalece os laços matrimoniais e a espiritualidade.
-                      Nossos encontros transformam vidas, renovam o amor e
-                      aproximam casais de Cristo. Venha fazer parte desta
-                      bênção!
-                    </p>
-                  </div>
-                </Card>
-              </Link>
+                      fortalecemos nossa ligação com Deus e uns com os outros."
+                imgUrl="https://source.unsplash.com/random/?random-landscape-oriented-b"
+                link="/"
+              />
+              <CardMovimento
+                title="Renovação Carismática"
+                text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+                imgUrl="https://source.unsplash.com/random/?random-landscape-oriented-c"
+                link="/"
+              />
+              <CardMovimento
+                title="ECC"
+                text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+                imgUrl="https://source.unsplash.com/random/?random-landscape-oriented-d"
+                link="/"
+              />
             </div>
           </div>
 
