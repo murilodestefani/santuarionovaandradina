@@ -62,6 +62,13 @@ export function Footer() {
             >
               Devocional
             </Link>
+            <a
+              className="flex justify-center text-tiny text-neutral-50 md:text-sm xl:text-base"
+              href="http://localhost:1337/admin"
+              target="_blank"
+            >
+              Login
+            </a>
           </div>
           <div className="flex gap-4">
             <a

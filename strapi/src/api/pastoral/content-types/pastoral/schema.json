@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pastorals",
+  "info": {
+    "singularName": "pastoral",
+    "pluralName": "pastorals",
+    "displayName": "Pastoral"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

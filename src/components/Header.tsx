@@ -23,15 +23,19 @@ export function Header() {
   const menuItems = [
     <Link to={"/"}>Home</Link>,
     <Link to={"/teste"}>Teste</Link>,
+    <a href="http://localhost:1337/admin" target="_blank">
+      Login
+    </a>,
   ];
 
   return (
-    <Navbar isBordered onMenuOpenChange={setIsMenuOpen} className="bg-black/25">
-      <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="relative z-50 flex text-slate-50 sm:hidden"
-        />
+    <Navbar
+      maxWidth="2xl"
+      isBordered
+      onMenuOpenChange={setIsMenuOpen}
+      className="bg-black/25"
+    >
+      <NavbarContent className="flex justify-between bg-fuchsia-600">
         <NavbarBrand>
           <Link to="/">
             <img
@@ -41,9 +45,13 @@ export function Header() {
             />
           </Link>
         </NavbarBrand>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="relative z-50 flex text-slate-50 lg:hidden"
+        />
       </NavbarContent>
 
-      <NavbarContent className="hidden gap-4 sm:flex" justify="center">
+      <NavbarContent className="hidden gap-4 lg:flex" justify="center">
         <NavbarItem isActive>
           <Link className="text-slate-50" to={"/"}>
             Home
@@ -265,12 +273,12 @@ export function Header() {
           </DropdownMenu>
         </Dropdown>
       </NavbarContent>
-      <NavbarContent justify="end">
+      <NavbarContent justify="end" className="hidden lg:flex">
         <NavbarItem>
           <Link to={"/"}>
             <Button
               variant="ghost"
-              className="hidden rounded-md bg-transparent px-12 py-5 text-neutral-50 md:flex"
+              className="rounded-md bg-transparent px-12 py-5 text-neutral-50"
             >
               Contato
             </Button>

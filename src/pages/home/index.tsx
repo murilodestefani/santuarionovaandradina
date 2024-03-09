@@ -24,8 +24,8 @@ import ImaculadoCoracao from "../../assets/img/imaculado.png";
 import Cabecalho from "../../components/Cabecalho";
 import CardEvent from "../../components/CardEvent";
 import CardPost from "../../components/CardPost";
-import CardMovimento from "../../components/CardMovimento";
 import { useState, useEffect } from "react";
+import CardPastoral from "../../components/CardPastoral";
 
 interface Event {
   id: number;
@@ -44,7 +44,7 @@ interface Event {
     };
     title: string;
     date: string;
-    categories: {
+    category: {
       data: {
         attributes: {
           name: string;
@@ -71,7 +71,7 @@ interface Post {
     };
     title: string;
     content: string;
-    categories: {
+    category: {
       data: {
         attributes: {
           name: string;
@@ -81,10 +81,31 @@ interface Post {
   };
 }
 
+interface Pastoral {
+  id: number;
+  attributes: {
+    cover: {
+      data: {
+        attributes: {
+          alternativeText: string;
+          formats: {
+            small: {
+              url: string;
+            };
+          };
+        };
+      };
+    };
+    title: string;
+    description: string;
+  };
+}
+
 export function Home() {
   const apiUrl = "http://localhost:1337";
   const [events, setEvents] = useState<Event[]>([]);
   const [posts, setPosts] = useState<Post[]>([]);
+  const [pastorals, setPastorals] = useState<Pastoral[]>([]);
 
   useEffect(() => {
     axios
@@ -98,6 +119,13 @@ export function Home() {
       .get(`${apiUrl}/api/posts?populate=*`)
       .then(({ data }) => setPosts(data.data))
       .catch((error) => console.error("Erro ao carregar posts:", error));
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${apiUrl}/api/pastorals?populate=*`)
+      .then(({ data }) => setPastorals(data.data))
+      .catch((error) => console.error("Erro ao carregar pastorals:", error));
   }, []);
 
   return (
@@ -150,7 +178,7 @@ export function Home() {
                   key={id}
                   title={attributes.title}
                   date={attributes.date}
-                  category="Teste"
+                  category={attributes.category.data.attributes.name}
                   imgUrl={`${apiUrl}${attributes.cover.data.attributes.formats.small.url}`}
                   imgAlt={`${apiUrl}${attributes.cover.data.attributes.alternativeText}`}
                   link={`${apiUrl}/api/events/${id}`}
@@ -186,9 +214,9 @@ export function Home() {
       </section>
       <section
         id="noticias"
-        className="flex min-h-svh items-center justify-center"
+        className="flex min-h-svh w-full items-center justify-center"
       >
-        <div className="container flex flex-col items-center gap-10 p-4 py-20">
+        <div className="container flex flex-col items-center gap-1 p-4 py-20">
           <Cabecalho subtitle="acompanhe as" title="Notícias do Santuário" />
 
           <div className="flex items-center justify-center">
@@ -198,7 +226,7 @@ export function Home() {
                   key={id}
                   title={attributes.title}
                   content={attributes.content}
-                  category="Teste"
+                  category={attributes.category.data.attributes.name}
                   imgUrl={`${apiUrl}${attributes.cover.data.attributes.formats.small.url}`}
                   imgAlt={`${apiUrl}${attributes.cover.data.attributes.alternativeText}`}
                   link={`${apiUrl}/api/posts/${id}`}
@@ -314,33 +342,16 @@ export function Home() {
 
           <div className="flex items-center justify-center">
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              <CardMovimento
-                title="Pastoral da Catequese"
-                text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
-                imgUrl="https://source.unsplash.com/random/?random-landscape-oriented-a"
-                link="/"
-              />
-              <CardMovimento
-                title="Pastoral do Dizimo"
-                text="Venha fazer parte desta experiência de crescimento
-                      espiritual, onde a educação religiosa se une à comunhão e
-                      ao serviço à comunidade. Através da catequese,
-                      fortalecemos nossa ligação com Deus e uns com os outros."
-                imgUrl="https://source.unsplash.com/random/?random-landscape-oriented-b"
-                link="/"
-              />
-              <CardMovimento
-                title="Renovação Carismática"
-                text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
-                imgUrl="https://source.unsplash.com/random/?random-landscape-oriented-c"
-                link="/"
-              />
-              <CardMovimento
-                title="ECC"
-                text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
-                imgUrl="https://source.unsplash.com/random/?random-landscape-oriented-d"
-                link="/"
-              />
+              {pastorals.map(({ id, attributes }) => (
+                <CardPastoral
+                  key={id}
+                  title={attributes.title}
+                  description={attributes.description}
+                  imgUrl={`${apiUrl}${attributes.cover.data.attributes.formats.small.url}`}
+                  imgAlt={`${apiUrl}${attributes.cover.data.attributes.alternativeText}`}
+                  link={`${apiUrl}/api/pastorals/${id}`}
+                />
+              ))}
             </div>
           </div>
 

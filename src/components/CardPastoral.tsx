@@ -2,17 +2,19 @@ import { Card, Image } from "@nextui-org/react";
 import React from "react";
 import { Link } from "react-router-dom";
 
-interface CardMovimentoProps {
+interface CardPastoralProps {
   title: string;
-  text: string;
+  description: string;
   imgUrl: string;
+  imgAlt: string;
   link: string;
 }
 
-const CardMovimento: React.FC<CardMovimentoProps> = ({
+const CardPastoral: React.FC<CardPastoralProps> = ({
   title,
-  text,
+  description,
   imgUrl,
+  imgAlt,
   link,
 }) => {
   return (
@@ -22,13 +24,14 @@ const CardMovimento: React.FC<CardMovimentoProps> = ({
           className="aspect-3/2 rounded-b-none border-b-4 border-penn-red-900"
           removeWrapper
           src={imgUrl}
+          alt={imgAlt}
         />
         <div className="p flex flex-col items-center gap-1 p-4">
           <h4 className="line-clamp-2 text-lg font-bold text-penn-red-900 md:text-base lg:text-lg">
             {title}
           </h4>
           <p className="line-clamp-5 text-center text-xs text-shark-700">
-           {text}
+            {description}
           </p>
         </div>
       </Card>
@@ -36,4 +39,4 @@ const CardMovimento: React.FC<CardMovimentoProps> = ({
   );
 };
 
-export default CardMovimento;
+export default CardPastoral;
