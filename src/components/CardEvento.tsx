@@ -2,6 +2,8 @@ import { Card, CardFooter, Image } from "@nextui-org/react";
 import { CalendarBlank, BookmarkSimple } from "@phosphor-icons/react";
 import React from "react";
 import { Link } from "react-router-dom";
+import { format, setDefaultOptions } from "date-fns";
+import { ptBR } from "date-fns/locale";
 
 interface CardEventoProps {
   title: string;
@@ -18,6 +20,9 @@ const CardEvento: React.FC<CardEventoProps> = ({
   imgUrl,
   link,
 }) => {
+  setDefaultOptions({ locale: ptBR });
+  const formattedDate = format(new Date(date), "dd MMM, yyyy");
+
   return (
     <Link to={link}>
       <Card
@@ -37,7 +42,7 @@ const CardEvento: React.FC<CardEventoProps> = ({
           <div className="flex w-full items-center justify-between">
             <div className="flex items-center justify-center gap-1 text-neutral-50">
               <CalendarBlank className="text-lion-500" weight="fill" />
-              <span className="text-tiny">{date}</span>
+              <span className="text-tiny">{formattedDate}</span>
             </div>
             <div className="flex items-center justify-center gap-1 text-neutral-50">
               <BookmarkSimple className="text-lion-500" weight="fill" />

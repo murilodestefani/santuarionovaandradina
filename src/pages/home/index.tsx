@@ -1,3 +1,4 @@
+import axios from "axios";
 import { Button, Image } from "@nextui-org/react";
 import {
   Camera,
@@ -20,13 +21,51 @@ import Feed05 from "../../assets/img/instagram/05.png";
 import Feed06 from "../../assets/img/instagram/06.png";
 import Cover from "../../assets/img/video.jpg";
 import ImaculadoCoracao from "../../assets/img/imaculado.png";
-import BotaoVoltarAoTopo from "../../components/BotaoVoltarAoTopo";
 import Cabecalho from "../../components/Cabecalho";
 import CardEvento from "../../components/CardEvento";
 import CardNoticia from "../../components/CardNoticia";
 import CardMovimento from "../../components/CardMovimento";
+import { useState, useEffect } from "react";
+
+interface Post {
+  id: number;
+  attributes: {
+    cover: {
+      data: {
+        attributes: {
+          alternativeText: string;
+          formats: {
+            large: {
+              url: string;
+            };
+          };
+        };
+      };
+    };
+    title: string;
+    content: string;
+    date: string;
+    categories: {
+      data: {
+        attributes: {
+          name: string;
+        };
+      };
+    };
+  };
+}
 
 export function Home() {
+  const apiUrl = "http://localhost:1337";
+  const [posts, setPosts] = useState<Post[]>([]);
+
+  useEffect(() => {
+    axios
+      .get(`${apiUrl}/api/posts?populate=*`)
+      .then(({ data }) => setPosts(data.data))
+      .catch((error) => console.error("Erro ao carregar posts:", error));
+  }, []);
+
   return (
     <>
       <section
@@ -72,48 +111,16 @@ export function Home() {
 
           <div className="ultimos-eventos flex items-center justify-center">
             <div className="grid gap-6 sm:grid-cols-3">
-              <CardEvento
-                title="Reflexões Espirituais: Encontre Paz Interior na Oração Diária"
-                date="08 Mar, 2024"
-                category="Eventos"
-                imgUrl="https://source.unsplash.com/random/?jesus"
-                link="/"
-              />
-              <CardEvento
-                title="Celebrações Litúrgicas: Conectando Fé e Comunidade Amorosa"
-                date="13 Fev, 2024"
-                category="Dicas"
-                imgUrl="https://source.unsplash.com/random/?bible"
-                link="/"
-              />
-              <CardEvento
-                title="Mensagens do Evangelho: Orientações para uma Vida Abençoada"
-                date="27 Jan, 2024"
-                category="Entretenimento"
-                imgUrl="https://source.unsplash.com/random/?pray"
-                link="/"
-              />
-              <CardEvento
-                title="Testemunhos de Fé: Experiências que Fortalecem o Coração"
-                date="02 Dez, 2023"
-                category="Cultura"
-                imgUrl="https://source.unsplash.com/random/?faith"
-                link="/"
-              />
-              <CardEvento
-                title="Santos e Devoções: Inspirando-se nos Exemplos Divinos"
-                date="29 Nov, 2023"
-                category="Tecnologia"
-                imgUrl="https://source.unsplash.com/random/?christ"
-                link="/"
-              />
-              <CardEvento
-                title="Serviço Voluntário: A Caridade que Transforma Vidas"
-                date="17 Out, 2023"
-                category="Educação"
-                imgUrl="https://source.unsplash.com/random/?heaven"
-                link="/"
-              />
+              {posts.map(({ id, attributes }) => (
+                <CardEvento
+                  key={id}
+                  title={attributes.title}
+                  date={attributes.date}
+                  category="Teste"
+                  imgUrl={`${apiUrl}${attributes.cover.data.attributes.formats.large.url}`}
+                  link="/"
+                />
+              ))}
             </div>
           </div>
 
@@ -450,7 +457,6 @@ export function Home() {
           <Image className="hidden xl:block" radius="none" src={Feed06} />
         </div>
       </section>
-      <BotaoVoltarAoTopo />
     </>
   );
 }
