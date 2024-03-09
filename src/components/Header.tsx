@@ -26,11 +26,7 @@ export function Header() {
   ];
 
   return (
-    <Navbar
-      position="static"
-      onMenuOpenChange={setIsMenuOpen}
-      className="relative z-50 bg-purple-600 bg-transparent"
-    >
+    <Navbar isBordered onMenuOpenChange={setIsMenuOpen} className="bg-black/25">
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
