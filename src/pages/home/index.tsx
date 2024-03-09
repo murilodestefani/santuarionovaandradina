@@ -153,7 +153,7 @@ export function Home() {
                   category="Teste"
                   imgUrl={`${apiUrl}${attributes.cover.data.attributes.formats.small.url}`}
                   imgAlt={`${apiUrl}${attributes.cover.data.attributes.alternativeText}`}
-                  link="/"
+                  link={`${apiUrl}/api/events/${id}`}
                 />
               ))}
             </div>
@@ -193,7 +193,7 @@ export function Home() {
 
           <div className="flex items-center justify-center">
             <div className="grid gap-6 sm:grid-cols-3">
-            {posts.map(({ id, attributes }) => (
+              {posts.map(({ id, attributes }) => (
                 <CardPost
                   key={id}
                   title={attributes.title}
@@ -201,7 +201,7 @@ export function Home() {
                   category="Teste"
                   imgUrl={`${apiUrl}${attributes.cover.data.attributes.formats.small.url}`}
                   imgAlt={`${apiUrl}${attributes.cover.data.attributes.alternativeText}`}
-                  link="/"
+                  link={`${apiUrl}/api/posts/${id}`}
                 />
               ))}
             </div>
