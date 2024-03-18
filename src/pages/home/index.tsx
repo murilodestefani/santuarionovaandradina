@@ -1,4 +1,3 @@
-import axios from "axios";
 import { Button, Image } from "@nextui-org/react";
 import {
   Camera,
@@ -26,10 +25,13 @@ import CardEvent from "../../components/CardEvent";
 import CardPost from "../../components/CardPost";
 import { useState, useEffect } from "react";
 import CardPastoral from "../../components/CardPastoral";
+import { api } from "../../lib/axios";
+import { STRAPI_URL } from "../../env";
 
 interface Event {
   id: number;
   attributes: {
+    slug: string;
     cover: {
       data: {
         attributes: {
@@ -57,6 +59,7 @@ interface Event {
 interface Post {
   id: number;
   attributes: {
+    slug: string;
     cover: {
       data: {
         attributes: {
@@ -84,6 +87,7 @@ interface Post {
 interface Pastoral {
   id: number;
   attributes: {
+    slug: string;
     cover: {
       data: {
         attributes: {
@@ -102,28 +106,44 @@ interface Pastoral {
 }
 
 export function Home() {
-  const apiUrl = "http://localhost:1337";
   const [events, setEvents] = useState<Event[]>([]);
   const [posts, setPosts] = useState<Post[]>([]);
   const [pastorals, setPastorals] = useState<Pastoral[]>([]);
 
   useEffect(() => {
-    axios
-      .get(`${apiUrl}/api/events?populate=*`)
+    api
+      .get(`/events`, {
+        params: {
+          populate: "*",
+          sort: "date:desc",
+          "pagination[start]": 0,
+          "pagination[limit]": 6,
+          "pagination[withCount]": true,
+        },
+      })
       .then(({ data }) => setEvents(data.data))
       .catch((error) => console.error("Erro ao carregar events:", error));
-  }, []);
 
-  useEffect(() => {
-    axios
-      .get(`${apiUrl}/api/posts?populate=*`)
+    api
+      .get(`/posts`, {
+        params: {
+          populate: "*",
+          sort: "date:desc",
+          "pagination[start]": 0,
+          "pagination[limit]": 6,
+          "pagination[withCount]": true,
+        },
+      })
       .then(({ data }) => setPosts(data.data))
       .catch((error) => console.error("Erro ao carregar posts:", error));
-  }, []);
 
-  useEffect(() => {
-    axios
-      .get(`${apiUrl}/api/pastorals?populate=*`)
+    api
+      .get(`/pastorals`, {
+        params: {
+          populate: "*",
+          sort: "title",
+        },
+      })
       .then(({ data }) => setPastorals(data.data))
       .catch((error) => console.error("Erro ao carregar pastorals:", error));
   }, []);
@@ -179,9 +199,9 @@ export function Home() {
                   title={attributes.title}
                   date={attributes.date}
                   category={attributes.category.data.attributes.name}
-                  imgUrl={`${apiUrl}${attributes.cover.data.attributes.formats.small.url}`}
-                  imgAlt={`${apiUrl}${attributes.cover.data.attributes.alternativeText}`}
-                  link={`${apiUrl}/api/events/${id}`}
+                  imgUrl={`${STRAPI_URL}${attributes.cover.data.attributes.formats.small.url}`}
+                  imgAlt={`${STRAPI_URL}${attributes.cover.data.attributes.alternativeText}`}
+                  link={`${STRAPI_URL}/api/events/${attributes.slug}`}
                 />
               ))}
             </div>
@@ -216,7 +236,7 @@ export function Home() {
         id="noticias"
         className="flex min-h-svh w-full items-center justify-center"
       >
-        <div className="container flex flex-col items-center gap-1 p-4 py-20">
+        <div className="container flex flex-col items-center gap-10 p-4 py-20">
           <Cabecalho subtitle="acompanhe as" title="Notícias do Santuário" />
 
           <div className="flex items-center justify-center">
@@ -227,9 +247,9 @@ export function Home() {
                   title={attributes.title}
                   content={attributes.content}
                   category={attributes.category.data.attributes.name}
-                  imgUrl={`${apiUrl}${attributes.cover.data.attributes.formats.small.url}`}
-                  imgAlt={`${apiUrl}${attributes.cover.data.attributes.alternativeText}`}
-                  link={`${apiUrl}/api/posts/${id}`}
+                  imgUrl={`${STRAPI_URL}${attributes.cover.data.attributes.formats.small.url}`}
+                  imgAlt={`${STRAPI_URL}${attributes.cover.data.attributes.alternativeText}`}
+                  link={`${STRAPI_URL}/api/posts/${id}`}
                 />
               ))}
             </div>
@@ -347,9 +367,9 @@ export function Home() {
                   key={id}
                   title={attributes.title}
                   description={attributes.description}
-                  imgUrl={`${apiUrl}${attributes.cover.data.attributes.formats.small.url}`}
-                  imgAlt={`${apiUrl}${attributes.cover.data.attributes.alternativeText}`}
-                  link={`${apiUrl}/api/pastorals/${id}`}
+                  imgUrl={`${STRAPI_URL}${attributes.cover.data.attributes.formats.small.url}`}
+                  imgAlt={`${STRAPI_URL}${attributes.cover.data.attributes.alternativeText}`}
+                  link={`${STRAPI_URL}/api/pastorals/${id}`}
                 />
               ))}
             </div>

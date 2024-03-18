@@ -31,11 +31,10 @@ export function Header() {
   return (
     <Navbar
       maxWidth="2xl"
-      isBordered
       onMenuOpenChange={setIsMenuOpen}
       className="bg-black/25"
     >
-      <NavbarContent className="flex justify-between bg-fuchsia-600">
+      <NavbarContent className="flex justify-between">
         <NavbarBrand>
           <Link to="/">
             <img

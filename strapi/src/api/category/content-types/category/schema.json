@@ -27,6 +27,10 @@
       "relation": "oneToMany",
       "target": "api::event.event",
       "mappedBy": "category"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }

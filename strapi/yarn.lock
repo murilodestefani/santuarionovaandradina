@@ -105,7 +105,7 @@
     core-js-pure "^3.30.2"
     regenerator-runtime "^0.14.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.5", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.6", "@babel/runtime@^7.21.0", "@babel/runtime@^7.23.8", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.5", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.15.4", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.6", "@babel/runtime@^7.21.0", "@babel/runtime@^7.23.8", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   version "7.24.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.24.0.tgz#584c450063ffda59697021430cb47101b085951e"
   integrity sha512-Chk32uHMg6TnQdvw2e9IlqPpFX/6NLuK0Ys2PqLb7/gL5uFn9mXvK715FGLlOLQrcO4qIkNHkvPGktzzXexsFw==
@@ -1943,7 +1943,7 @@
     "@strapi/utils" "4.20.4"
     fs-extra "10.0.0"
 
-"@strapi/strapi@4.20.4":
+"@strapi/strapi@4.20.4", "@strapi/strapi@^4.14.0":
   version "4.20.4"
   resolved "https://registry.yarnpkg.com/@strapi/strapi/-/strapi-4.20.4.tgz#3d8ce54909e14e5ebf5e39a0428b35e0502edd08"
   integrity sha512-rpGDO7RyWEhSyVFhyUfB9n2HAYZ7BAW/pj8Txgq7YKdNTer2uNoII0C7Q3ytwaHwyeBADM5y8ugQ5nOa7+no1A==
@@ -2071,7 +2071,7 @@
     aria-hidden "^1.2.3"
     react-remove-scroll "^2.5.7"
 
-"@strapi/utils@4.20.4":
+"@strapi/utils@4.20.4", "@strapi/utils@^4.14.0":
   version "4.20.4"
   resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.20.4.tgz#f8b0e2bbc2bee9c08e924e40e91fbb81fbc812f3"
   integrity sha512-AywtgPpuHRLg0Ma9+kpTOdu0yO6Iq6iE3pob7KNVPlyr2N4T+qDCIGQGacuNwqAfQZHqdcPG3vyFAdSD+44NNw==
@@ -2291,7 +2291,7 @@
     "@types/interpret" "*"
     "@types/node" "*"
 
-"@types/lodash@^4.14.149", "@types/lodash@^4.14.165":
+"@types/lodash@^4.14.149", "@types/lodash@^4.14.165", "@types/lodash@^4.14.175":
   version "4.14.202"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.202.tgz#f09dbd2fb082d507178b2f2a5c7e74bd72ff98f8"
   integrity sha512-OvlIYQK9tNneDlS0VN54LLd5uiPCBOp7gS5Z0f1mjoJYBrtStzgmJBxONW3U6OZqdtNzZPmn9BS/7WI7BFFcFQ==
@@ -8782,6 +8782,17 @@ statuses@2.0.1, statuses@^2.0.1:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==
 
+strapi-plugin-slugify@^2.3.8:
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/strapi-plugin-slugify/-/strapi-plugin-slugify-2.3.8.tgz#feed725c6becbb0408ce601f40055aaa76b98316"
+  integrity sha512-lbC04NaVgy18nY0l4KI4ld6h1L5bGAvEe0H3hOdFnaksKRRu+rwTaB58oQQBqZtWu4lZ2n2dtMQJB/mSmFd8KA==
+  dependencies:
+    "@sindresorhus/slugify" "1.1.0"
+    "@strapi/strapi" "^4.14.0"
+    "@strapi/utils" "^4.14.0"
+    lodash "^4.17.21"
+    yup "^0.32.9"
+
 stream-chain@2.2.5, stream-chain@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/stream-chain/-/stream-chain-2.2.5.tgz#b30967e8f14ee033c5b9a19bbe8a2cba90ba0d09"
@@ -9776,6 +9787,19 @@ yup@0.32.9:
     "@types/lodash" "^4.14.165"
     lodash "^4.17.20"
     lodash-es "^4.17.15"
+    nanoclone "^0.2.1"
+    property-expr "^2.0.4"
+    toposort "^2.0.2"
+
+yup@^0.32.9:
+  version "0.32.11"
+  resolved "https://registry.yarnpkg.com/yup/-/yup-0.32.11.tgz#d67fb83eefa4698607982e63f7ca4c5ed3cf18c5"
+  integrity sha512-Z2Fe1bn+eLstG8DRR6FTavGD+MeAwyfmouhHsIUgaADz8jvFKbO/fXc2trJKZg+5EBjh4gGm3iU/t3onKlXHIg==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    "@types/lodash" "^4.14.175"
+    lodash "^4.17.21"
+    lodash-es "^4.17.21"
     nanoclone "^0.2.1"
     property-expr "^2.0.4"
     toposort "^2.0.2"

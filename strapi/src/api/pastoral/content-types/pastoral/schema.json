@@ -4,7 +4,8 @@
   "info": {
     "singularName": "pastoral",
     "pluralName": "pastorals",
-    "displayName": "Pastoral"
+    "displayName": "Pastoral",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -20,12 +21,16 @@
       "required": true
     },
     "cover": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

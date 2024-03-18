@@ -37,6 +37,10 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "posts"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }
