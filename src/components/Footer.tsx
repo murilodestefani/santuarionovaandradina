@@ -52,7 +52,7 @@ export function Footer() {
             </Link>
             <Link
               className="flex justify-center text-tiny text-neutral-50 md:text-sm xl:text-base"
-              to={"/"}
+              to={"/eventos"}
             >
               Eventos
             </Link>

@@ -37,7 +37,7 @@ interface Event {
         attributes: {
           alternativeText: string;
           formats: {
-            small: {
+            medium: {
               url: string;
             };
           };
@@ -199,7 +199,7 @@ export function Home() {
                   title={attributes.title}
                   date={attributes.date}
                   category={attributes.category.data.attributes.name}
-                  imgUrl={`${STRAPI_URL}${attributes.cover.data.attributes.formats.small.url}`}
+                  imgUrl={`${STRAPI_URL}${attributes.cover.data.attributes.formats.medium.url}`}
                   imgAlt={`${STRAPI_URL}${attributes.cover.data.attributes.alternativeText}`}
                   link={`/eventos/${attributes.slug}`}
                 />

@@ -11,7 +11,7 @@ interface Event {
         attributes: {
           alternativeText: string;
           formats: {
-            small: {
+            medium: {
               url: string;
             };
           };
