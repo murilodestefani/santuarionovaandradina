@@ -201,13 +201,13 @@ export function Home() {
                   category={attributes.category.data.attributes.name}
                   imgUrl={`${STRAPI_URL}${attributes.cover.data.attributes.formats.small.url}`}
                   imgAlt={`${STRAPI_URL}${attributes.cover.data.attributes.alternativeText}`}
-                  link={`${STRAPI_URL}/api/events/${attributes.slug}`}
+                  link={`/eventos/${attributes.slug}`}
                 />
               ))}
             </div>
           </div>
 
-          <Link to={"/"}>
+          <Link to={"/eventos"}>
             <Button
               startContent={<Camera weight="fill" />}
               className="rounded-md bg-penn-red-900 px-12 py-5 font-semibold text-neutral-50"

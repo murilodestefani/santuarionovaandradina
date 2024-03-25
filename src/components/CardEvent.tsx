@@ -31,7 +31,7 @@ const CardEvent: React.FC<CardEventProps> = ({
         isPressable
         isFooterBlurred
         isBlurred
-        className="aspect-2/3 max-w-80"
+        className="aspect-2/3 w-80"
       >
         <Image
           isZoomed
