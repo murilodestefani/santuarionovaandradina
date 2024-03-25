@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../../lib/axios";
 import { useParams } from "react-router-dom";
-
 interface Event {
   id: number;
   attributes: {
@@ -47,9 +46,25 @@ export function Event() {
   }, []);
 
   return (
-    <>
-      <h1>Evento</h1>
-      <pre>{JSON.stringify(event, null, 2)}</pre>
-    </>
+    <article>
+      <div className="-mt-16 flex h-52 w-svw bg-penn-red-900"></div>
+      {event.map((event) => (
+        <div
+          key={event.id}
+          className="container flex flex-col items-center justify-center gap-4 px-4"
+        >
+          <div className="relative -mt-28 overflow-clip rounded-lg">
+            <img
+              className="aspect-video object-cover"
+              src="https://source.unsplash.com/random/?city,night"
+            />
+            <div className="absolute inset-x-0 bottom-0 flex items-center justify-center p-4 text-neutral-50">
+              <span>{event.attributes.date}</span>
+            </div>
+          </div>
+          <h1 className="text-center font-bold">{event.attributes.title}</h1>
+        </div>
+      ))}
+    </article>
   );
 }

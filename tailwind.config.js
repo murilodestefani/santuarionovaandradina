@@ -73,8 +73,8 @@ export default {
           layout: {}, // light theme layout tokens
           colors: {
             primary: {
-              DEFAULT: "#9F0000",
-              foreground: "#000000",
+              DEFAULT: "#9f0000",
+              foreground: "#fafafa",
             },
             focus: "#9f0000",
           }, // light theme colors
