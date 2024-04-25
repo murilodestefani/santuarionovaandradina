@@ -5,14 +5,11 @@ import {
   WhatsappLogo,
   YoutubeLogo,
 } from "@phosphor-icons/react";
-import Logo from "../assets/img/logo.png";
+import Logo from "../../assets/img/logo.png";
 import { Link } from "react-router-dom";
-import BotaoVoltarAoTopo from "./BotaoVoltarAoTopo";
 
 export function Footer() {
   return (
-    <>
-      <BotaoVoltarAoTopo />
       <footer id="footer" className="bg-penn-red-900 py-6">
         <div className="container flex flex-col items-center gap-6">
           <Link to={"/"} className="flex flex-col items-center">
@@ -150,6 +147,5 @@ export function Footer() {
           </div>
         </div>
       </footer>
-    </>
   );
 }

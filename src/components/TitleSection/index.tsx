@@ -1,15 +1,15 @@
 import React from "react";
 
-interface CabecalhoProps {
-  subtitle: string;
+interface TitleSectionProps {
+  prefix?: string;
   title: string;
 }
 
-const Cabecalho: React.FC<CabecalhoProps> = ({ subtitle, title }) => {
+const TitleSection: React.FC<TitleSectionProps> = ({ prefix, title }) => {
   return (
     <header className="flex flex-col gap-4">
       <h3 className="text-center text-xs font-bold uppercase tracking-wider text-penn-red-400 lg:text-sm">
-        {subtitle}
+        {prefix}
       </h3>
       <h2 className="text-center text-3xl font-bold text-penn-red-900 lg:text-5xl">
         {title}
@@ -18,4 +18,4 @@ const Cabecalho: React.FC<CabecalhoProps> = ({ subtitle, title }) => {
   );
 };
 
-export default Cabecalho;
+export default TitleSection;

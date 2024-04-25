@@ -1,7 +1,7 @@
 import { CaretUp } from "@phosphor-icons/react";
 import React, { useState, useEffect } from "react";
 
-const BotaoVoltarAoTopo: React.FC = () => {
+const ButtonBackToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -39,4 +39,4 @@ const BotaoVoltarAoTopo: React.FC = () => {
   );
 };
 
-export default BotaoVoltarAoTopo;
+export default ButtonBackToTop;
