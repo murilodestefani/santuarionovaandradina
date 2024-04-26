@@ -1,5 +1,5 @@
 import { CaretUp } from "@phosphor-icons/react";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const ButtonBackToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

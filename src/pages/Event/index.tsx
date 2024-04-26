@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { api } from "../../lib/axios";
 import { useParams } from "react-router-dom";
-interface Event {
+import { api } from "../../lib/axios";
+
+interface EventProps {
   id: number;
   attributes: {
     slug: string;
@@ -32,7 +33,7 @@ interface Event {
 export function Event() {
   const { slug } = useParams();
 
-  const [event, setEvent] = useState<Event[]>([]);
+  const [event, setEvent] = useState<EventProps[]>([]);
 
   useEffect(() => {
     api

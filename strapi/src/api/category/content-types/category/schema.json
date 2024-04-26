@@ -16,12 +16,6 @@
       "type": "string",
       "required": true
     },
-    "posts": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::post.post",
-      "mappedBy": "category"
-    },
     "events": {
       "type": "relation",
       "relation": "oneToMany",
@@ -31,6 +25,12 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "news": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::new.new",
+      "mappedBy": "category"
     }
   }
 }

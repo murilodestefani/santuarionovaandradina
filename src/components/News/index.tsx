@@ -1,13 +1,13 @@
 import { Button } from "@nextui-org/react";
-import { Camera } from "@phosphor-icons/react";
+import { Newspaper } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { STRAPI_URL } from "../../env";
 import { api } from "../../lib/axios";
-import CardEvent from "../CardEvent";
+import CardNew from "../CardNew";
 import TitleSection from "../TitleSection";
 
-interface EventProps {
+interface NewProps {
   id: number;
   attributes: {
     slug: string;
@@ -16,7 +16,7 @@ interface EventProps {
         attributes: {
           alternativeText: string;
           formats: {
-            medium: {
+            small: {
               url: string;
             };
           };
@@ -24,7 +24,7 @@ interface EventProps {
       };
     };
     title: string;
-    date: string;
+    content: string;
     category: {
       data: {
         attributes: {
@@ -35,12 +35,12 @@ interface EventProps {
   };
 }
 
-export function Events() {
-  const [events, setEvents] = useState<EventProps[]>([]);
+export function News() {
+  const [news, setNews] = useState<NewProps[]>([]);
 
   useEffect(() => {
     api
-      .get(`/events`, {
+      .get(`/news`, {
         params: {
           populate: "*",
           sort: "date:desc",
@@ -49,37 +49,36 @@ export function Events() {
           "pagination[withCount]": true,
         },
       })
-      .then(({ data }) => setEvents(data.data))
-      .catch((error) => console.error("Erro ao carregar events:", error));
+      .then(({ data }) => setNews(data.data))
+      .catch((error) => console.error("Erro ao carregar news:", error));
   }, []);
 
   return (
-    <section className="flex min-h-svh items-center justify-center">
+    <section className="flex min-h-svh w-full items-center justify-center">
       <div className="container flex flex-col items-center gap-10 p-4 py-20">
-        <TitleSection prefix="fique por dentro dos" title="Últimos Eventos" />
+        <TitleSection prefix="acompanhe as" title="Notícias do Santuário" />
 
         <div className="flex items-center justify-center">
           <div className="grid gap-6 sm:grid-cols-3">
-            {events.map(({ id, attributes }) => (
-              <CardEvent
+            {news.map(({ id, attributes }) => (
+              <CardNew
                 key={id}
                 title={attributes.title}
-                date={attributes.date}
+                content={attributes.content}
                 category={attributes.category.data.attributes.name}
-                imgUrl={`${STRAPI_URL}${attributes.cover.data.attributes.formats.medium.url}`}
+                imgUrl={`${STRAPI_URL}${attributes.cover.data.attributes.formats.small.url}`}
                 imgAlt={`${STRAPI_URL}${attributes.cover.data.attributes.alternativeText}`}
-                link={`/eventos/${attributes.slug}`}
+                link={`${STRAPI_URL}/api/posts/${id}`}
               />
             ))}
           </div>
         </div>
-
-        <Link to={"/eventos"}>
+        <Link to={"/"}>
           <Button
-            startContent={<Camera weight="fill" />}
+            startContent={<Newspaper weight="fill" />}
             className="rounded-md bg-penn-red-900 px-12 py-5 font-semibold text-neutral-50"
           >
-            Eventos
+            Ver Todas
           </Button>
         </Link>
       </div>

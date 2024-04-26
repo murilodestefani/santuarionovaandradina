@@ -1,15 +1,14 @@
 import { Button } from "@nextui-org/react";
-import { Header } from "../../components/Header";
-import { Footer } from "../../components/Footer";
-import { Link } from "react-router-dom";
 import { CaretCircleLeft } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
+import { Footer } from "../../components/Footer";
+import { Header } from "../../components/Header";
 
 export function NotFound() {
   return (
     <>
       <Header />
       <section
-        id="notfound"
         className="-mt-16 flex h-svh w-svw items-center justify-center bg-neutral-400"
       >
         <div className="container flex flex-col items-center justify-center gap-4">

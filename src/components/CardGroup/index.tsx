@@ -2,7 +2,7 @@ import { Card, Image } from "@nextui-org/react";
 import React from "react";
 import { Link } from "react-router-dom";
 
-interface CardPastoralProps {
+interface CardGroupProps {
   title: string;
   description: string;
   imgUrl: string;
@@ -10,7 +10,7 @@ interface CardPastoralProps {
   link: string;
 }
 
-const CardPastoral: React.FC<CardPastoralProps> = ({
+const CardGroup: React.FC<CardGroupProps> = ({
   title,
   description,
   imgUrl,
@@ -39,4 +39,4 @@ const CardPastoral: React.FC<CardPastoralProps> = ({
   );
 };
 
-export default CardPastoral;
+export default CardGroup;

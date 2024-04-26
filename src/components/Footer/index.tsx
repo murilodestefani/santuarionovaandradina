@@ -5,8 +5,8 @@ import {
   WhatsappLogo,
   YoutubeLogo,
 } from "@phosphor-icons/react";
-import Logo from "../../assets/img/logo.png";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/img/logo.png";
 
 export function Footer() {
   return (

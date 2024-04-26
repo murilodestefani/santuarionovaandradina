@@ -1,21 +1,21 @@
-import React from "react";
 import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
   Button,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle,
   Dropdown,
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
 } from "@nextui-org/react";
 import { CaretDown } from "@phosphor-icons/react";
-import Logo from "../../assets/img/logo.png";
+import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/img/logo.png";
 import ButtonBackToTop from "../ButtonBackToTop";
 
 export function Header() {

@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "pastorals",
+  "collectionName": "groups",
   "info": {
-    "singularName": "pastoral",
-    "pluralName": "pastorals",
-    "displayName": "Pastoral",
-    "description": ""
+    "singularName": "group",
+    "pluralName": "groups",
+    "displayName": "Group"
   },
   "options": {
     "draftAndPublish": false
@@ -21,16 +20,16 @@
       "required": true
     },
     "cover": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     },
     "slug": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true
     }
   }
 }

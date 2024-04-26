@@ -1,9 +1,9 @@
 import { Card, CardFooter, Image } from "@nextui-org/react";
-import { CalendarBlank, BookmarkSimple } from "@phosphor-icons/react";
-import React from "react";
-import { Link } from "react-router-dom";
+import { BookmarkSimple, CalendarBlank } from "@phosphor-icons/react";
 import { format, setDefaultOptions } from "date-fns";
 import { ptBR } from "date-fns/locale";
+import React from "react";
+import { Link } from "react-router-dom";
 
 interface CardEventProps {
   title: string;

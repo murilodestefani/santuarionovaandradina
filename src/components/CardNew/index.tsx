@@ -2,7 +2,7 @@ import { Card, Image } from "@nextui-org/react";
 import React from "react";
 import { Link } from "react-router-dom";
 
-interface CardPostProps {
+interface CardNewProps {
   title: string;
   content: string;
   category: string;
@@ -11,7 +11,7 @@ interface CardPostProps {
   link: string;
 }
 
-const CardPost: React.FC<CardPostProps> = ({
+const CardNew: React.FC<CardNewProps> = ({
   title,
   content,
   category,
@@ -44,4 +44,4 @@ const CardPost: React.FC<CardPostProps> = ({
   );
 };
 
-export default CardPost;
+export default CardNew;

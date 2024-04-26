@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "posts",
+  "collectionName": "news",
   "info": {
-    "singularName": "post",
-    "pluralName": "posts",
-    "displayName": "Post",
+    "singularName": "new",
+    "pluralName": "news",
+    "displayName": "New",
     "description": ""
   },
   "options": {
@@ -27,7 +27,7 @@
     "cover": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images"
       ]
@@ -36,10 +36,11 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::category.category",
-      "inversedBy": "posts"
+      "inversedBy": "news"
     },
     "slug": {
       "type": "uid",
+      "required": true,
       "targetField": "title"
     }
   }

@@ -1,11 +1,11 @@
+import { Pagination } from "@nextui-org/react";
 import { useEffect, useState } from "react";
-import { api } from "../../lib/axios";
 import CardEvent from "../../components/CardEvent";
 import { STRAPI_URL } from "../../env";
-import { Pagination } from "@nextui-org/react";
+import { api } from "../../lib/axios";
 
 export function Events() {
-  interface Event {
+  interface EventProps {
     id: number;
     attributes: {
       slug: string;
@@ -33,7 +33,7 @@ export function Events() {
     };
   }
 
-  const [events, setEvents] = useState<Event[]>([]);
+  const [events, setEvents] = useState<EventProps[]>([]);
   const [pageIndex, setPageIndex] = useState(1);
   const [meta, setMeta] = useState<any>(null);
 

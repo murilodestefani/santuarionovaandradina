@@ -1,11 +1,11 @@
 import { Button } from "@nextui-org/react";
 import {
-  Church,
   BookOpenText,
-  MonitorPlay,
   CalendarCheck,
-  HandsPraying,
   Chats,
+  Church,
+  HandsPraying,
+  MonitorPlay,
 } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 
