@@ -3,36 +3,9 @@ import { useEffect, useState } from "react";
 import CardEvent from "../../components/CardEvent";
 import { STRAPI_URL } from "../../env";
 import { api } from "../../lib/axios";
+import { EventProps } from "../../interfaces";
 
 export function Events() {
-  interface EventProps {
-    id: number;
-    attributes: {
-      slug: string;
-      cover: {
-        data: {
-          attributes: {
-            alternativeText: string;
-            formats: {
-              medium: {
-                url: string;
-              };
-            };
-          };
-        };
-      };
-      title: string;
-      date: string;
-      category: {
-        data: {
-          attributes: {
-            name: string;
-          };
-        };
-      };
-    };
-  }
-
   const [events, setEvents] = useState<EventProps[]>([]);
   const [pageIndex, setPageIndex] = useState(1);
   const [meta, setMeta] = useState<any>(null);

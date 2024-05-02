@@ -6,34 +6,7 @@ import { STRAPI_URL } from "../../env";
 import { api } from "../../lib/axios";
 import CardEvent from "../CardEvent";
 import TitleSection from "../TitleSection";
-
-interface EventProps {
-  id: number;
-  attributes: {
-    slug: string;
-    cover: {
-      data: {
-        attributes: {
-          alternativeText: string;
-          formats: {
-            medium: {
-              url: string;
-            };
-          };
-        };
-      };
-    };
-    title: string;
-    date: string;
-    category: {
-      data: {
-        attributes: {
-          name: string;
-        };
-      };
-    };
-  };
-}
+import { EventProps } from "../../interfaces";
 
 export function Events() {
   const [events, setEvents] = useState<EventProps[]>([]);

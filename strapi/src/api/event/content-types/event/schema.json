@@ -41,6 +41,10 @@
     "slug": {
       "type": "uid",
       "targetField": "title",
+      "required": true
+    },
+    "album": {
+      "type": "string",
       "required": false
     }
   }

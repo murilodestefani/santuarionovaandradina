@@ -1,15 +1,9 @@
 import { Card, Image } from "@nextui-org/react";
 import React from "react";
 import { Link } from "react-router-dom";
+import { CardNewProps } from "../../interfaces";
 
-interface CardNewProps {
-  title: string;
-  content: string;
-  category: string;
-  imgUrl: string;
-  imgAlt: string;
-  link: string;
-}
+
 
 const CardNew: React.FC<CardNewProps> = ({
   title,

@@ -1,18 +1,10 @@
 import { Card, CardFooter, Image } from "@nextui-org/react";
 import { BookmarkSimple, CalendarBlank } from "@phosphor-icons/react";
-import { format, setDefaultOptions } from "date-fns";
-import { ptBR } from "date-fns/locale";
+import dayjs from "dayjs";
+import "dayjs/locale/pt-br";
 import React from "react";
 import { Link } from "react-router-dom";
-
-interface CardEventProps {
-  title: string;
-  date: string;
-  category: string;
-  imgUrl: string;
-  imgAlt: string;
-  link: string;
-}
+import { CardEventProps } from "../../interfaces";
 
 const CardEvent: React.FC<CardEventProps> = ({
   title,
@@ -22,17 +14,12 @@ const CardEvent: React.FC<CardEventProps> = ({
   imgAlt,
   link,
 }) => {
-  setDefaultOptions({ locale: ptBR });
-  const formattedDate = format(new Date(date), "dd MMM, yyyy");
+  dayjs.locale("pt-br");
+  const formattedDate = dayjs(date).format("DD MMM, YYYY");
 
   return (
     <Link to={link}>
-      <Card
-        isPressable
-        isFooterBlurred
-        isBlurred
-        className="aspect-2/3 w-80"
-      >
+      <Card isPressable isFooterBlurred isBlurred className="aspect-2/3 w-80">
         <Image
           isZoomed
           removeWrapper
@@ -45,7 +32,7 @@ const CardEvent: React.FC<CardEventProps> = ({
           <div className="flex w-full items-center justify-between">
             <div className="flex items-center justify-center gap-1 text-neutral-50">
               <CalendarBlank className="text-lion-500" weight="fill" />
-              <span className="text-tiny">{formattedDate}</span>
+              <span className="text-tiny capitalize">{formattedDate}</span>
             </div>
             <div className="flex items-center justify-center gap-1 text-neutral-50">
               <BookmarkSimple className="text-lion-500" weight="fill" />

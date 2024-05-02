@@ -1,14 +1,7 @@
 import { Card, Image } from "@nextui-org/react";
 import React from "react";
 import { Link } from "react-router-dom";
-
-interface CardGroupProps {
-  title: string;
-  description: string;
-  imgUrl: string;
-  imgAlt: string;
-  link: string;
-}
+import { CardGroupProps } from "../../interfaces";
 
 const CardGroup: React.FC<CardGroupProps> = ({
   title,
