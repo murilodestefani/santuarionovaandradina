@@ -5,6 +5,8 @@ import { Events } from "./pages/Events";
 import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
 import { Teste } from "./pages/Teste";
+import { News } from "./pages/News";
+import { New } from "./pages/New";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
       {
         path: "/eventos",
         element: <Events />,
+      },
+      {
+        path: "/noticias/:slug",
+        element: <New />,
+      },
+      {
+        path: "/noticias",
+        element: <News />,
       },
       {
         path: "/teste",

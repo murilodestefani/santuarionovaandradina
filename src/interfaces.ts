@@ -71,3 +71,38 @@ export interface EventProps {
     };
   };
 }
+
+export interface NewProps {
+  id: number;
+  attributes: {
+    slug: string;
+    cover: {
+      data: {
+        attributes: {
+          alternativeText: string;
+          formats: {
+            large: {
+              url: string;
+            };
+            small: {
+              url: string;
+            };
+            medium: {
+              url: string;
+            };
+          };
+        };
+      };
+    };
+    title: string;
+    content: string;
+    date: string;
+    category: {
+      data: {
+        attributes: {
+          name: string;
+        };
+      };
+    };
+  };
+}

@@ -45,7 +45,7 @@
     },
     "album": {
       "type": "string",
-      "required": false
+      "required": true
     }
   }
 }

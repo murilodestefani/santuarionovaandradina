@@ -6,34 +6,7 @@ import { STRAPI_URL } from "../../env";
 import { api } from "../../lib/axios";
 import CardNew from "../CardNew";
 import TitleSection from "../TitleSection";
-
-interface NewProps {
-  id: number;
-  attributes: {
-    slug: string;
-    cover: {
-      data: {
-        attributes: {
-          alternativeText: string;
-          formats: {
-            small: {
-              url: string;
-            };
-          };
-        };
-      };
-    };
-    title: string;
-    content: string;
-    category: {
-      data: {
-        attributes: {
-          name: string;
-        };
-      };
-    };
-  };
-}
+import { NewProps } from "../../interfaces";
 
 export function News() {
   const [news, setNews] = useState<NewProps[]>([]);
@@ -66,14 +39,14 @@ export function News() {
                 title={attributes.title}
                 content={attributes.content}
                 category={attributes.category.data.attributes.name}
-                imgUrl={`${STRAPI_URL}${attributes.cover.data.attributes.formats.small.url}`}
+                imgUrl={`${STRAPI_URL}${attributes.cover.data.attributes.formats.medium.url}`}
                 imgAlt={`${STRAPI_URL}${attributes.cover.data.attributes.alternativeText}`}
-                link={`${STRAPI_URL}/api/posts/${id}`}
+                link={`/noticias/${attributes.slug}`}
               />
             ))}
           </div>
         </div>
-        <Link to={"/"}>
+        <Link to={"/noticias"}>
           <Button
             startContent={<Newspaper weight="fill" />}
             className="rounded-md bg-penn-red-900 px-12 py-5 font-semibold text-neutral-50"
