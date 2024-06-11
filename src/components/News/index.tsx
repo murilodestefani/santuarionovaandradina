@@ -1,12 +1,12 @@
+import { STRAPI_URL } from "@/env";
+import { NewProps } from "@/interfaces";
+import CardNew from "@components/CardNew";
+import TitleSection from "@components/TitleSection";
+import { api } from "@lib/axios";
 import { Button } from "@nextui-org/react";
 import { Newspaper } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { STRAPI_URL } from "../../env";
-import { api } from "../../lib/axios";
-import CardNew from "../CardNew";
-import TitleSection from "../TitleSection";
-import { NewProps } from "../../interfaces";
 
 export function News() {
   const [news, setNews] = useState<NewProps[]>([]);

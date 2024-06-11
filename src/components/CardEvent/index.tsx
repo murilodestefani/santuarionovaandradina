@@ -1,10 +1,10 @@
+import { CardEventProps } from "@/interfaces";
 import { Card, CardFooter, Image } from "@nextui-org/react";
 import { BookmarkSimple, CalendarBlank } from "@phosphor-icons/react";
 import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
 import React from "react";
 import { Link } from "react-router-dom";
-import { CardEventProps } from "../../interfaces";
 
 const CardEvent: React.FC<CardEventProps> = ({
   title,

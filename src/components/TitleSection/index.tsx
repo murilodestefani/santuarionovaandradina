@@ -1,9 +1,5 @@
+import { TitleSectionProps } from "@/interfaces";
 import React from "react";
-
-interface TitleSectionProps {
-  prefix?: string;
-  title: string;
-}
 
 const TitleSection: React.FC<TitleSectionProps> = ({ prefix, title }) => {
   return (

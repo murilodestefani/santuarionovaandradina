@@ -106,3 +106,8 @@ export interface NewProps {
     };
   };
 }
+
+export interface TitleSectionProps {
+  prefix?: string;
+  title: string;
+}

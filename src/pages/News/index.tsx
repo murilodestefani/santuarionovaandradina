@@ -1,9 +1,9 @@
+import { STRAPI_URL } from "@/env";
+import { NewProps } from "@/interfaces";
+import CardNew from "@components/CardNew";
+import { api } from "@lib/axios";
 import { Pagination } from "@nextui-org/react";
 import { useEffect, useState } from "react";
-import CardNew from "../../components/CardNew";
-import { STRAPI_URL } from "../../env";
-import { NewProps } from "../../interfaces";
-import { api } from "../../lib/axios";
 
 export function News() {
   const [news, setNews] = useState<NewProps[]>([]);

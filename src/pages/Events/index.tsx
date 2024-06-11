@@ -1,9 +1,9 @@
+import { STRAPI_URL } from "@/env";
+import { EventProps } from "@/interfaces";
+import CardEvent from "@components/CardEvent";
+import { api } from "@lib/axios";
 import { Pagination } from "@nextui-org/react";
 import { useEffect, useState } from "react";
-import CardEvent from "../../components/CardEvent";
-import { STRAPI_URL } from "../../env";
-import { api } from "../../lib/axios";
-import { EventProps } from "../../interfaces";
 
 export function Events() {
   const [events, setEvents] = useState<EventProps[]>([]);

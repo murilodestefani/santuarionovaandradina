@@ -1,5 +1,5 @@
+import instagram from "@components/instagram";
 import { Image } from "@nextui-org/react";
-import instagram from "../instagram";
 
 export function Instagram() {
   return (

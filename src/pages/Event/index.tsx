@@ -1,3 +1,6 @@
+import { STRAPI_URL } from "@/env";
+import { EventProps, Photo } from "@/interfaces";
+import { api } from "@lib/axios";
 import { Button, Link } from "@nextui-org/react";
 import { Image } from "@phosphor-icons/react";
 import axios from "axios";
@@ -5,9 +8,6 @@ import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { STRAPI_URL } from "../../env";
-import { EventProps, Photo } from "../../interfaces";
-import { api } from "../../lib/axios";
 
 const PHOTOS_URL = "https://api.flickr.com/services/rest";
 const ALBUM_URL = `https://www.flickr.com/photos/${import.meta.env.VITE_FLICKR_USER_ID}/albums/`;

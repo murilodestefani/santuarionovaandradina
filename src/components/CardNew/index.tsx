@@ -1,7 +1,7 @@
+import { CardNewProps } from "@/interfaces";
 import { Card, Image } from "@nextui-org/react";
 import React from "react";
 import { Link } from "react-router-dom";
-import { CardNewProps } from "../../interfaces";
 
 
 

@@ -1,12 +1,11 @@
+import { Layout } from "@components/layout";
+import { Event } from "@pages/Event";
+import { Events } from "@pages/Events";
+import { Home } from "@pages/Home";
+import { New } from "@pages/New";
+import { News } from "@pages/News";
+import { NotFound } from "@pages/NotFound";
 import { createBrowserRouter } from "react-router-dom";
-import { Layout } from "./components/layout";
-import { Event } from "./pages/Event";
-import { Events } from "./pages/Events";
-import { Home } from "./pages/Home";
-import { NotFound } from "./pages/NotFound";
-import { Teste } from "./pages/Teste";
-import { News } from "./pages/News";
-import { New } from "./pages/New";
 
 const router = createBrowserRouter([
   {
@@ -31,10 +30,6 @@ const router = createBrowserRouter([
       {
         path: "/noticias",
         element: <News />,
-      },
-      {
-        path: "/teste",
-        element: <Teste />,
       },
       {
         path: "*",

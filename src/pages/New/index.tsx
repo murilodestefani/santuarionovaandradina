@@ -1,10 +1,10 @@
+import { STRAPI_URL } from "@/env";
+import { NewProps } from "@/interfaces";
+import { api } from "@lib/axios";
 import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { NewProps } from "../../interfaces";
-import { api } from "../../lib/axios";
-import { STRAPI_URL } from "../../env";
 
 export function New() {
   const { slug } = useParams();

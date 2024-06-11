@@ -1,3 +1,4 @@
+import Logo from "@assets/img/logo.png";
 import { Button, Divider, Image } from "@nextui-org/react";
 import {
   FacebookLogo,
@@ -6,7 +7,6 @@ import {
   YoutubeLogo,
 } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/img/logo.png";
 
 export function Footer() {
   return (

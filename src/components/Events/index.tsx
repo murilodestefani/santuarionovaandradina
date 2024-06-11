@@ -1,12 +1,12 @@
+import { STRAPI_URL } from "@/env";
+import { EventProps } from "@/interfaces";
+import CardEvent from "@components/CardEvent";
+import TitleSection from "@components/TitleSection";
+import { api } from "@lib/axios";
 import { Button } from "@nextui-org/react";
 import { Camera } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { STRAPI_URL } from "../../env";
-import { api } from "../../lib/axios";
-import CardEvent from "../CardEvent";
-import TitleSection from "../TitleSection";
-import { EventProps } from "../../interfaces";
 
 export function Events() {
   const [events, setEvents] = useState<EventProps[]>([]);

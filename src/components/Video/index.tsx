@@ -1,6 +1,6 @@
+import Cover from "@assets/img/video.jpg";
 import { Image } from "@nextui-org/react";
 import { CaretRight } from "@phosphor-icons/react";
-import Cover from "../../assets/img/video.jpg";
 
 export function Video() {
   return (

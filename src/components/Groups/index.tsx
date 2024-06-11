@@ -1,11 +1,11 @@
+import { STRAPI_URL } from "@/env";
+import CardGroup from "@components/CardGroup";
+import TitleSection from "@components/TitleSection";
+import { api } from "@lib/axios";
 import { Button } from "@nextui-org/react";
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { STRAPI_URL } from "../../env";
-import { api } from "../../lib/axios";
-import CardGroup from "../CardGroup";
-import TitleSection from "../TitleSection";
 
 interface GroupProps {
   id: number;

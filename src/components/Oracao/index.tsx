@@ -1,5 +1,5 @@
+import Imaculado from "@assets/img/imaculado.png";
 import { Image } from "@nextui-org/react";
-import Imaculado from "../../assets/img/imaculado.png";
 
 export function Oracao() {
   return (
