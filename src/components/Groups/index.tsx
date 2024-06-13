@@ -6,27 +6,8 @@ import { Button } from "@nextui-org/react";
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { GroupProps } from "@/interfaces"
 
-interface GroupProps {
-  id: number;
-  attributes: {
-    slug: string;
-    cover: {
-      data: {
-        attributes: {
-          alternativeText: string;
-          formats: {
-            small: {
-              url: string;
-            };
-          };
-        };
-      };
-    };
-    title: string;
-    description: string;
-  };
-}
 
 export function Groups() {
   const [groups, setGroups] = useState<GroupProps[]>([]);

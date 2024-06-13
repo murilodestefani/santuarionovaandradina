@@ -22,8 +22,9 @@ export function New() {
             populate: "*",
           },
         });
-        const novaNoticia = newsResponse.data.data[0];
-        setNoticia(novaNoticia);
+        const newData = newsResponse.data.data[0];
+        setNoticia(newData);
+        document.title = `${newData.attributes.title}`;
       } catch (error) {
         console.error("Erro ao carregar dados:", error);
         // Você pode definir um estado de erro aqui e mostrá-lo ao usuário
@@ -34,7 +35,7 @@ export function New() {
 
   return (
     <article>
-      <div className="bg-primary -mt-16 flex h-52 w-full"></div>
+      <div className="-mt-16 flex h-52 w-full bg-primary"></div>
 
       {noticia && (
         <div
@@ -60,13 +61,11 @@ export function New() {
             {dayjs(noticia.attributes.date).format("YYYY")}
           </span>
 
-          <h1 className="text-primary text-center text-2xl font-bold md:text-3xl lg:text-4xl">
+          <h1 className="text-center text-2xl font-bold text-primary md:text-3xl lg:text-4xl">
             {noticia.attributes.title}
           </h1>
 
-          <div className="mb-4 text-justify">
-            {noticia.attributes.content}
-          </div>
+          <div className="mb-4 text-justify">{noticia.attributes.content}</div>
         </div>
       )}
     </article>

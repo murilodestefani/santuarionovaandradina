@@ -6,6 +6,8 @@ import { Pagination } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 
 export function News() {
+  document.title = `${import.meta.env.VITE_TITLE_SITE} - Notícias`;
+
   const [news, setNews] = useState<NewProps[]>([]);
   const [pageIndex, setPageIndex] = useState(1);
   const [meta, setMeta] = useState<any>(null);

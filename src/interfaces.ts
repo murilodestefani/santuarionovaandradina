@@ -120,3 +120,24 @@ export interface VerseProps {
   number: number;
   text: string;
 }
+
+export interface GroupProps {
+  id: number;
+  attributes: {
+    slug: string;
+    cover: {
+      data: {
+        attributes: {
+          alternativeText: string;
+          formats: {
+            small: {
+              url: string;
+            };
+          };
+        };
+      };
+    };
+    title: string;
+    description: string;
+  };
+}

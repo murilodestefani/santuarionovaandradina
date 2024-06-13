@@ -32,6 +32,7 @@ export function Event() {
         });
         const eventData = eventsResponse.data.data[0];
         setEvent(eventData);
+        document.title = `${eventData.attributes.title}`;
 
         if (eventData && eventData.attributes.album) {
           const photosResponse = await axios.get(PHOTOS_URL, {
