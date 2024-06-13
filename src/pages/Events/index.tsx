@@ -52,7 +52,7 @@ export function Events() {
           ))}
         </div>
       </div>
-      
+
       {meta && (
         <Pagination
           className="pb-8"

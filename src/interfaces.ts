@@ -111,3 +111,12 @@ export interface TitleSectionProps {
   prefix?: string;
   title: string;
 }
+
+export interface VerseProps {
+  book: {
+    name: string;
+  };
+  chapter: number;
+  number: number;
+  text: string;
+}

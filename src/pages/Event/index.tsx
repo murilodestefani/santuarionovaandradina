@@ -58,7 +58,7 @@ export function Event() {
 
   return (
     <article>
-      <div className="-mt-16 flex h-52 w-full bg-penn-red-900"></div>
+      <div className="-mt-16 flex h-52 w-full bg-primary"></div>
 
       <div
         key={event.id}
@@ -77,25 +77,23 @@ export function Event() {
           </div>
         </div>
 
-        <span className="text-xs text-shark-700 md:text-sm">
+        <span className="text-xs uppercase text-primary-600 md:text-sm">
           {dayjs(event.attributes.date).format("DD")} de{" "}
           {dayjs(event.attributes.date).format("MMMM")} de{" "}
           {dayjs(event.attributes.date).format("YYYY")}
         </span>
 
-        <h1 className="text-center text-2xl font-bold text-shark-950 md:text-3xl lg:text-4xl">
+        <h1 className="text-center text-2xl font-bold text-primary md:text-3xl lg:text-4xl">
           {event.attributes.title}
         </h1>
 
-        <p className="text-justify text-shark-950">
-          {event.attributes.content}
-        </p>
+        <div className="mb-4 text-justify">{event.attributes.content}</div>
 
         <Button
           href={`${ALBUM_URL}${event.attributes.album}`}
           as={Link}
           startContent={<Image weight="fill" />}
-          className="my-4 rounded-md bg-penn-red-900 px-12 py-5 font-semibold text-neutral-50"
+          className="bg-penn-red-900 my-4 rounded-md px-12 py-5 font-semibold text-neutral-50"
           isExternal
         >
           Abrir no Flickr

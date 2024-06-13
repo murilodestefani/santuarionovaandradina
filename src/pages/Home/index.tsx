@@ -1,7 +1,6 @@
 import { Events } from "@components/Events";
 import { Groups } from "@components/Groups";
 import { Hero } from "@components/Hero";
-import { Instagram } from "@components/Instagram";
 import { News } from "@components/News";
 import { Oracao } from "@components/Oracao";
 import { Shortcuts } from "@components/Shortcuts";
@@ -19,7 +18,6 @@ export function Home() {
       <Groups />
       <Video />
       <Oracao />
-      <Instagram />
     </>
   );
 }
