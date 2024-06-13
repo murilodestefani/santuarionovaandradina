@@ -8,21 +8,23 @@ export function Video() {
       <div className="container flex flex-col overflow-clip rounded-md bg-neutral-50 shadow-lg md:flex-row">
         <div className="flex flex-col gap-2 p-4 md:justify-between xl:p-8">
           <div className="flex flex-col gap-2">
-            <h4 className="line-clamp-3 text-xl font-bold text-penn-red-900 lg:text-2xl xl:text-4xl">
-              O importante é estar sempre na presença de Deus
+            <h4 className="line-clamp-3 text-xl font-bold text-primary lg:text-2xl xl:text-4xl">
+              São Bento | Documentário
             </h4>
-            <p className="line-clamp-4 text-justify text-xs text-shark-950 lg:text-sm xl:text-base">
-              Se você está interessado na história religiosa, deseja encontrar
-              um refúgio espiritual ou simplesmente busca por um momento de
-              inspiração.
+            <p className="line-clamp-4 text-justify text-xs  lg:text-sm xl:text-base">
+              A Ordem de São Bento ou Ordem Beneditina (em Latim: Ordo Sancti
+              Benedicti, sigla O.S.B.) é a mais antiga ordem religiosa católica
+              de clausura monástica que se baseia na observância dos preceitos
+              destinados a regular a convivência social. É considerada como a
+              iniciadora do chamado movimento monacal.
             </p>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-tiny font-semibold text-shark-700 xl:text-sm">
+            <span className="text-tiny font-semibold text-primary-600 xl:text-sm">
               30.08.2023
             </span>
             <a
-              className="flex items-center justify-center gap-1 text-tiny font-semibold uppercase text-shark-700 xl:text-sm"
+              className="flex items-center justify-center gap-1 text-tiny font-semibold uppercase text-primary-600 xl:text-sm"
               href="#"
               target="_blank"
             >
@@ -31,7 +33,11 @@ export function Video() {
           </div>
         </div>
         <a className="lg:w-2/3" href="#" target="_blank">
-          <Image className="aspect-video" radius="none" src={Cover} />
+          <iframe
+            className="aspect-video h-full w-full object-cover"
+            src="https://www.youtube.com/embed/zwLgUZ5cQaE?controls=0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
+          ></iframe>
         </a>
       </div>
     </section>

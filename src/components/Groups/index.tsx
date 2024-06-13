@@ -6,8 +6,7 @@ import { Button } from "@nextui-org/react";
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { GroupProps } from "@/interfaces"
-
+import { GroupProps } from "@/interfaces";
 
 export function Groups() {
   const [groups, setGroups] = useState<GroupProps[]>([]);
@@ -18,6 +17,9 @@ export function Groups() {
         params: {
           populate: "*",
           sort: "title",
+          "pagination[start]": 0,
+          "pagination[limit]": 4,
+          "pagination[withCount]": true,
         },
       })
       .then(({ data }) => setGroups(data.data))
@@ -47,12 +49,14 @@ export function Groups() {
           </div>
         </div>
 
-        <Link to={"/"}>
+        <Link to={"/grupos"}>
           <Button
+            color="primary"
+            radius="sm"
             startContent={<MagnifyingGlass weight="fill" />}
-            className="self-center rounded-md bg-penn-red-900 px-12 py-5 font-semibold text-neutral-50"
+            className="px-12 py-5 font-semibold"
           >
-            Explore Mais
+            Saiba Mais
           </Button>
         </Link>
       </div>

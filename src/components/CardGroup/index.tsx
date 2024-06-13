@@ -14,18 +14,17 @@ const CardGroup: React.FC<CardGroupProps> = ({
     <Link to={link} className="max-w-64 rounded-lg">
       <Card className="flex flex-col items-center">
         <Image
-          className="aspect-3/2 rounded-b-none border-b-4 border-penn-red-900"
+          className="aspect-3/2 rounded-b-none border-b-4 border-primary"
           removeWrapper
           src={imgUrl}
           alt={imgAlt}
         />
-        <div className="p flex flex-col items-center gap-1 p-4">
-          <h4 className="line-clamp-2 text-lg font-bold text-penn-red-900 md:text-base lg:text-lg">
+        <div className="flex flex-col items-center gap-1 p-4">
+          <h4 className="line-clamp-2 text-center text-lg font-bold text-primary md:text-base lg:text-lg">
             {title}
           </h4>
-          <p className="line-clamp-5 text-center text-xs text-shark-700">
-            {description}
-          </p>
+
+          <p className="line-clamp-5 text-center text-xs">{description}</p>
         </div>
       </Card>
     </Link>

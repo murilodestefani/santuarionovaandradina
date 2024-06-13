@@ -34,7 +34,7 @@ export function Slider() {
   }, []);
 
   return (
-    <section className="bg-penn-red-900 relative z-0 flex h-60 w-full items-center justify-center bg-[url('/saintbenedict.jpg')] bg-cover bg-fixed bg-center bg-no-repeat xl:h-96">
+    <section className="bg-penn-red-900 relative z-0 flex h-60 w-full items-center justify-center bg-[url('/bible.jpg')] bg-cover bg-fixed bg-center bg-no-repeat xl:h-96">
       <div className="absolute z-10 h-full w-full bg-gradient-to-t from-black/75"></div>
       <div className="absolute z-10 h-full w-full bg-black/50"></div>
       <div className="container z-20 flex flex-col items-center justify-center gap-2 p-4">

@@ -8,7 +8,7 @@ export function Hero() {
       <div className="container z-30 flex flex-col p-4">
         <div className="flex flex-col gap-2 lg:max-w-xl">
           <h1 className="text-center text-5xl font-bold text-background md:text-6xl xl:text-start xl:text-6xl">
-            Crux Sacra Sit Mihi Lux
+            A Cruz Sagrada seja a minha luz
           </h1>
           <p className="text-justify text-sm text-background sm:text-center sm:text-base xl:text-start">
             "Assim como São Bento, cuja devoção ecoa pelos séculos: 'Ora et labora', que todos encontrem aqui paz e inspiração. Recebam a bênção ao adentrar a página da Igreja de São Bento Protetor, onde a fé floresce e a proteção se faz presente."

@@ -49,7 +49,7 @@ export function Shortcuts() {
               <MonitorPlay className="size-8 text-primary md:size-10 lg:size-12" />
             </Button>
             <span className="text-tiny font-bold text-background md:text-sm lg:text-base">
-              Santuário Ao Vivo
+              Igreja Ao Vivo
             </span>
           </div>
         </Link>
