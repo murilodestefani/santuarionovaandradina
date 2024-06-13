@@ -6,6 +6,8 @@ import { Pagination } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 
 export function News() {
+  document.title = `${import.meta.env.VITE_TITLE_SITE} - Notícias`;
+
   const [news, setNews] = useState<NewProps[]>([]);
   const [pageIndex, setPageIndex] = useState(1);
   const [meta, setMeta] = useState<any>(null);
@@ -30,7 +32,7 @@ export function News() {
 
   return (
     <section className="flex flex-col items-center justify-center gap-4">
-      <div className="relative -mt-16 flex w-full items-center justify-center bg-[url('./assets/img/bg-eventos.jpg')] bg-cover bg-center bg-no-repeat py-12">
+      <div className="relative -mt-16 flex w-full items-center justify-center bg-[url('./assets/img/bg-noticias.jpg')] bg-cover bg-center bg-no-repeat py-12">
         <div className="absolute z-20 h-full w-full bg-gradient-to-t from-black/40 to-black/20"></div>
         <h1 className="z-30 mt-16 text-5xl font-bold text-neutral-50">
           Notícias

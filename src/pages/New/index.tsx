@@ -22,8 +22,9 @@ export function New() {
             populate: "*",
           },
         });
-        const novaNoticia = newsResponse.data.data[0];
-        setNoticia(novaNoticia);
+        const newData = newsResponse.data.data[0];
+        setNoticia(newData);
+        document.title = `${newData.attributes.title}`;
       } catch (error) {
         console.error("Erro ao carregar dados:", error);
         // Você pode definir um estado de erro aqui e mostrá-lo ao usuário
@@ -34,7 +35,7 @@ export function New() {
 
   return (
     <article>
-      <div className="-mt-16 flex h-52 w-full bg-penn-red-900"></div>
+      <div className="-mt-16 flex h-52 w-full bg-primary"></div>
 
       {noticia && (
         <div
@@ -54,19 +55,17 @@ export function New() {
             </div>
           </div>
 
-          <span className="text-xs text-shark-700 md:text-sm">
+          <span className="text-xs uppercase text-primary-600 md:text-sm">
             {dayjs(noticia.attributes.date).format("DD")} de{" "}
             {dayjs(noticia.attributes.date).format("MMMM")} de{" "}
             {dayjs(noticia.attributes.date).format("YYYY")}
           </span>
 
-          <h1 className="text-center text-2xl font-bold text-shark-950 md:text-3xl lg:text-4xl">
+          <h1 className="text-center text-2xl font-bold text-primary md:text-3xl lg:text-4xl">
             {noticia.attributes.title}
           </h1>
 
-          <p className="text-justify text-shark-950 mb-4">
-            {noticia.attributes.content}
-          </p>
+          <div className="mb-4 text-justify">{noticia.attributes.content}</div>
         </div>
       )}
     </article>

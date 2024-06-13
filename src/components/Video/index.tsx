@@ -1,10 +1,10 @@
-import Cover from "@assets/img/video.jpg";
+import Cover from "/saintbenedict.jpg";
 import { Image } from "@nextui-org/react";
 import { CaretRight } from "@phosphor-icons/react";
 
 export function Video() {
   return (
-    <section className="flex items-center justify-center bg-penn-red-900 px-8 py-16">
+    <section className="flex items-center justify-center bg-primary px-8 py-16">
       <div className="container flex flex-col overflow-clip rounded-md bg-neutral-50 shadow-lg md:flex-row">
         <div className="flex flex-col gap-2 p-4 md:justify-between xl:p-8">
           <div className="flex flex-col gap-2">

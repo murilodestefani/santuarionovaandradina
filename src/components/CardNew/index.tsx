@@ -28,10 +28,10 @@ const CardNew: React.FC<CardNewProps> = ({
       <span className="absolute right-4 top-4 rounded-md border-2 border-neutral-50/25 bg-black/25 px-3 py-1 text-xs font-bold uppercase text-neutral-50">
         {category}
       </span>
-      <h4 className="mt-1 line-clamp-2 text-lg font-bold text-shark-950 md:text-base lg:text-lg">
+      <h4 className="mt-1 line-clamp-2 text-lg font-bold md:text-base lg:text-lg">
         {title}
       </h4>
-      <p className="line-clamp-5 text-justify text-xs text-shark-700">
+      <p className="line-clamp-5 text-justify text-xs">
         {content}
       </p>
     </Link>

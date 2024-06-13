@@ -32,7 +32,7 @@ export function Events() {
         <TitleSection prefix="fique por dentro dos" title="Últimos Eventos" />
 
         <div className="flex items-center justify-center">
-          <div className="grid gap-6 sm:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {events.map(({ id, attributes }) => (
               <CardEvent
                 key={id}
@@ -49,10 +49,12 @@ export function Events() {
 
         <Link to={"/eventos"}>
           <Button
+          color="primary"
+          radius="sm"
             startContent={<Camera weight="fill" />}
-            className="rounded-md bg-penn-red-900 px-12 py-5 font-semibold text-neutral-50"
+            className="px-12 py-5 font-semibold"
           >
-            Eventos
+            Outros Eventos
           </Button>
         </Link>
       </div>

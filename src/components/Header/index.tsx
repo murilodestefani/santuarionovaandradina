@@ -1,4 +1,4 @@
-import Logo from "@assets/img/logo.png";
+import SaoBento from "@assets/img/logo-sao-bento.svg";
 import ButtonBackToTop from "@components/ButtonBackToTop";
 import {
   Button,
@@ -14,7 +14,7 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@nextui-org/react";
-import { CaretDown } from "@phosphor-icons/react";
+import { CaretDown, WhatsappLogo } from "@phosphor-icons/react";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -41,20 +41,20 @@ export function Header() {
             <Link to="/">
               <img
                 className="h-9"
-                src={Logo}
-                alt="Logo do Santuário Nova Andradina"
+                src={SaoBento}
+                alt="Logo da Igreja São Bento Protetor"
               />
             </Link>
           </NavbarBrand>
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className="relative z-50 flex text-slate-50 lg:hidden"
+            className="relative z-50 flex text-background lg:hidden"
           />
         </NavbarContent>
 
         <NavbarContent className="hidden gap-4 lg:flex" justify="center">
           <NavbarItem isActive>
-            <Link className="text-slate-50" to={"/"}>
+            <Link className="text-background" to={"/"}>
               Home
             </Link>
           </NavbarItem>
@@ -63,12 +63,12 @@ export function Header() {
               <DropdownTrigger>
                 <Button
                   disableRipple
-                  className="bg-transparent p-0 text-base text-slate-50 data-[hover=true]:bg-transparent"
+                  className="bg-transparent p-0 text-base text-background data-[hover=true]:bg-transparent"
                   endContent={<CaretDown />}
                   radius="sm"
                   variant="light"
                 >
-                  Santuário
+                  São Bento
                 </Button>
               </DropdownTrigger>
             </NavbarItem>
@@ -125,7 +125,7 @@ export function Header() {
               <DropdownTrigger>
                 <Button
                   disableRipple
-                  className="bg-transparent p-0 text-base text-slate-50 data-[hover=true]:bg-transparent"
+                  className="bg-transparent p-0 text-base text-background data-[hover=true]:bg-transparent"
                   endContent={<CaretDown />}
                   radius="sm"
                   variant="light"
@@ -167,7 +167,7 @@ export function Header() {
               <DropdownTrigger>
                 <Button
                   disableRipple
-                  className="bg-transparent p-0 text-base text-slate-50 data-[hover=true]:bg-transparent"
+                  className="bg-transparent p-0 text-base text-background data-[hover=true]:bg-transparent"
                   endContent={<CaretDown />}
                   radius="sm"
                   variant="light"
@@ -199,7 +199,7 @@ export function Header() {
               <DropdownTrigger>
                 <Button
                   disableRipple
-                  className="bg-transparent p-0 text-base text-slate-50 data-[hover=true]:bg-transparent"
+                  className="bg-transparent p-0 text-base text-background data-[hover=true]:bg-transparent"
                   endContent={<CaretDown />}
                   radius="sm"
                   variant="light"
@@ -231,7 +231,7 @@ export function Header() {
               <DropdownTrigger>
                 <Button
                   disableRipple
-                  className="bg-transparent p-0 text-base text-slate-50 data-[hover=true]:bg-transparent"
+                  className="bg-transparent p-0 text-base text-background data-[hover=true]:bg-transparent"
                   endContent={<CaretDown />}
                   radius="sm"
                   variant="light"
@@ -276,14 +276,14 @@ export function Header() {
         </NavbarContent>
         <NavbarContent justify="end" className="hidden lg:flex">
           <NavbarItem>
-            <Link to={"/"}>
-              <Button
-                variant="ghost"
-                className="rounded-md bg-transparent px-12 py-5 text-neutral-50"
-              >
-                Contato
+            <a
+              href="https://www.whatsapp.com/channel/0029VaNtl6ALtOjLIECUj608"
+              target="_blank"
+            >
+              <Button isIconOnly color="primary" variant="faded" radius="sm">
+                <WhatsappLogo weight="fill" />
               </Button>
-            </Link>
+            </a>
           </NavbarItem>
         </NavbarContent>
         <NavbarMenu>

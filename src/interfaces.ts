@@ -111,3 +111,33 @@ export interface TitleSectionProps {
   prefix?: string;
   title: string;
 }
+
+export interface VerseProps {
+  book: {
+    name: string;
+  };
+  chapter: number;
+  number: number;
+  text: string;
+}
+
+export interface GroupProps {
+  id: number;
+  attributes: {
+    slug: string;
+    cover: {
+      data: {
+        attributes: {
+          alternativeText: string;
+          formats: {
+            small: {
+              url: string;
+            };
+          };
+        };
+      };
+    };
+    title: string;
+    description: string;
+  };
+}

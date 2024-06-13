@@ -6,6 +6,8 @@ import { Pagination } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 
 export function Events() {
+  document.title = `${import.meta.env.VITE_TITLE_SITE} - Eventos`;
+  
   const [events, setEvents] = useState<EventProps[]>([]);
   const [pageIndex, setPageIndex] = useState(1);
   const [meta, setMeta] = useState<any>(null);
@@ -52,7 +54,7 @@ export function Events() {
           ))}
         </div>
       </div>
-      
+
       {meta && (
         <Pagination
           className="pb-8"

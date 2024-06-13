@@ -29,7 +29,7 @@ export function News() {
   return (
     <section className="flex min-h-svh w-full items-center justify-center">
       <div className="container flex flex-col items-center gap-10 p-4 py-20">
-        <TitleSection prefix="acompanhe as" title="Notícias do Santuário" />
+        <TitleSection prefix="acompanhe as" title="Notícias da Igreja" />
 
         <div className="flex items-center justify-center">
           <div className="grid gap-6 sm:grid-cols-3">
@@ -48,8 +48,10 @@ export function News() {
         </div>
         <Link to={"/noticias"}>
           <Button
+            color="primary"
+            radius="sm"
             startContent={<Newspaper weight="fill" />}
-            className="rounded-md bg-penn-red-900 px-12 py-5 font-semibold text-neutral-50"
+            className="px-12 py-5 font-semibold"
           >
             Ver Todas
           </Button>
