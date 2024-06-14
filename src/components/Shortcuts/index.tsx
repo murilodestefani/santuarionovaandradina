@@ -11,9 +11,9 @@ import { Link } from "react-router-dom";
 
 export function Shortcuts() {
   return (
-    <section className=" bg-primary py-10 md:py-14 lg:py-16 xl:py-20">
+    <section className="bg-primary py-10 md:py-14 lg:py-16 xl:py-20">
       <div className="container grid grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-6">
-        <Link to={"/"}>
+        <Link to={"/atalhos/horario-missa"}>
           <div className="flex flex-col items-center gap-1">
             <Button
               isIconOnly
@@ -27,7 +27,7 @@ export function Shortcuts() {
           </div>
         </Link>
 
-        <Link to={"/"}>
+        <Link to={"/atalhos/liturgia"}>
           <div className="flex flex-col items-center gap-1">
             <Button
               isIconOnly
@@ -40,7 +40,7 @@ export function Shortcuts() {
             </span>
           </div>
         </Link>
-        <Link to={"/"}>
+        <Link to={"/atalhos/ao-vivo"}>
           <div className="flex flex-col items-center gap-1">
             <Button
               isIconOnly
@@ -53,7 +53,7 @@ export function Shortcuts() {
             </span>
           </div>
         </Link>
-        <Link to={"/"}>
+        <a href="https://www.diocesedenavirai.org.br/eventos" target="_blank">
           <div className="flex flex-col items-center gap-1">
             <Button
               isIconOnly
@@ -65,8 +65,11 @@ export function Shortcuts() {
               Agenda Diocesana
             </span>
           </div>
-        </Link>
-        <Link to={"/"}>
+        </a>
+        <a
+          href="https://www.vaticannews.va/pt/santo-do-dia.html"
+          target="_blank"
+        >
           <div className="flex flex-col items-center gap-1">
             <Button
               isIconOnly
@@ -78,8 +81,11 @@ export function Shortcuts() {
               Santo do Dia
             </span>
           </div>
-        </Link>
-        <Link to={"/"}>
+        </a>
+        <a
+          href="https://www.whatsapp.com/channel/0029VaNtl6ALtOjLIECUj608"
+          target="_blank"
+        >
           <div className="flex flex-col items-center gap-1">
             <Button
               isIconOnly
@@ -91,7 +97,7 @@ export function Shortcuts() {
               Atendimento
             </span>
           </div>
-        </Link>
+        </a>
       </div>
     </section>
   );

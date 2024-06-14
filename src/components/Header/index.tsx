@@ -78,44 +78,9 @@ export function Header() {
                   História
                 </Link>
               </DropdownItem>
-              <DropdownItem key="Missionários Redentoristas">
+              <DropdownItem key="Cléro">
                 <Link color="foreground" to={"/"}>
-                  Missionários Redentoristas
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Horários">
-                <Link color="foreground" to={"/"}>
-                  Horários
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Festa do Padroeiro">
-                <Link color="foreground" to={"/"}>
-                  Festa do Padroeiro
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Loja">
-                <Link color="foreground" to={"/"}>
-                  Loja
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Comunidades">
-                <Link color="foreground" to={"/"}>
-                  Comunidades
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Sacramentos">
-                <Link color="foreground" to={"/"}>
-                  Sacramentos
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Expediente">
-                <Link color="foreground" to={"/"}>
-                  Expediente
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Peregrinação Diocesana">
-                <Link color="foreground" to={"/"}>
-                  Peregrinação Diocesana
+                  Cléro
                 </Link>
               </DropdownItem>
             </DropdownMenu>
@@ -145,53 +110,6 @@ export function Header() {
                   Vídeos
                 </Link>
               </DropdownItem>
-              <DropdownItem key="Documentos p/ Sacramento">
-                <Link color="foreground" to={"/"}>
-                  Documentos p/ Sacramento
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Media Kit">
-                <Link color="foreground" to={"/"}>
-                  Media Kit
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Calendário Paroquial">
-                <Link color="foreground" to={"/"}>
-                  Calendário Paroquial
-                </Link>
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-          <Dropdown>
-            <NavbarItem>
-              <DropdownTrigger>
-                <Button
-                  disableRipple
-                  className="bg-transparent p-0 text-base text-background data-[hover=true]:bg-transparent"
-                  endContent={<CaretDown />}
-                  radius="sm"
-                  variant="light"
-                >
-                  Atuação
-                </Button>
-              </DropdownTrigger>
-            </NavbarItem>
-            <DropdownMenu>
-              <DropdownItem key="Pastorais">
-                <Link color="foreground" to={"/"}>
-                  Pastorais
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Movimentos">
-                <Link color="foreground" to={"/"}>
-                  Movimentos
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Serviços">
-                <Link color="foreground" to={"/"}>
-                  Serviços
-                </Link>
-              </DropdownItem>
             </DropdownMenu>
           </Dropdown>
           <Dropdown>
@@ -209,70 +127,23 @@ export function Header() {
               </DropdownTrigger>
             </NavbarItem>
             <DropdownMenu>
-              <DropdownItem key="Artigos e Publicações">
-                <Link color="foreground" to={"/"}>
-                  Artigos e Publicações
-                </Link>
-              </DropdownItem>
               <DropdownItem key="Eventos">
                 <Link color="foreground" to={"/"}>
                   Eventos
                 </Link>
               </DropdownItem>
-              <DropdownItem key="Redes Sociais">
+              <DropdownItem key="Notícias">
                 <Link color="foreground" to={"/"}>
-                  Redes Sociais
+                  Notícias
                 </Link>
               </DropdownItem>
             </DropdownMenu>
           </Dropdown>
-          <Dropdown>
-            <NavbarItem>
-              <DropdownTrigger>
-                <Button
-                  disableRipple
-                  className="bg-transparent p-0 text-base text-background data-[hover=true]:bg-transparent"
-                  endContent={<CaretDown />}
-                  radius="sm"
-                  variant="light"
-                >
-                  Missas
-                </Button>
-              </DropdownTrigger>
-            </NavbarItem>
-            <DropdownMenu>
-              <DropdownItem key="Novena Perpétua">
-                <Link color="foreground" to={"/"}>
-                  Novena Perpétua
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Missa do Sagrado Coração">
-                <Link color="foreground" to={"/"}>
-                  Missa do Sagrado Coração
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Missa das Rosas">
-                <Link color="foreground" to={"/"}>
-                  Missa das Rosas
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Sábado Votivo">
-                <Link color="foreground" to={"/"}>
-                  Sábado Votivo
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Quinta Eucarística">
-                <Link color="foreground" to={"/"}>
-                  Quinta Eucarística
-                </Link>
-              </DropdownItem>
-              <DropdownItem key="Missas Dominicais">
-                <Link color="foreground" to={"/"}>
-                  Missas Dominicais
-                </Link>
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
+          <NavbarItem>
+            <Link className="text-background" to={"/agenda"}>
+              Agenda
+            </Link>
+          </NavbarItem>
         </NavbarContent>
         <NavbarContent justify="end" className="hidden lg:flex">
           <NavbarItem>

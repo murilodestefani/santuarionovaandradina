@@ -2,7 +2,7 @@ import { Button } from "@nextui-org/react";
 
 export function Hero() {
   return (
-    <section className="z-0 -mt-16 flex h-svh flex-col justify-center bg-black bg-[url('./saintbenedict.jpg')] bg-cover bg-center bg-no-repeat">
+    <section className="z-0 -mt-16 flex h-svh flex-col justify-center bg-black bg-[url('./saintbenedict.jpg')] bg-cover bg-top bg-no-repeat">
       <div className="absolute z-20 h-full w-full bg-black/40"></div>
       <div className="absolute z-30 h-full w-full bg-gradient-to-t from-black/50"></div>
       <div className="container z-30 flex flex-col p-4">

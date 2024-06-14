@@ -5,7 +5,7 @@
 -- Dumped from database version 12.18 (Ubuntu 12.18-0ubuntu0.20.04.1)
 -- Dumped by pg_dump version 16.2
 
--- Started on 2024-06-13 12:41:06
+-- Started on 2024-06-14 12:15:18
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -2257,11 +2257,11 @@ COPY public.files_related_morphs (id, file_id, related_id, related_type, field, 
 126	87	35	api::event.event	cover	1
 127	88	36	api::event.event	cover	1
 128	94	2	api::group.group	cover	1
-129	93	3	api::group.group	cover	1
-130	91	4	api::group.group	cover	1
 131	89	5	api::group.group	cover	1
 132	92	6	api::group.group	cover	1
-133	90	7	api::group.group	cover	1
+134	91	4	api::group.group	cover	1
+136	93	3	api::group.group	cover	1
+138	90	7	api::group.group	cover	1
 \.
 
 
@@ -2273,11 +2273,11 @@ COPY public.files_related_morphs (id, file_id, related_id, related_type, field, 
 
 COPY public.groups (id, title, description, slug, created_at, updated_at, created_by_id, updated_by_id) FROM stdin;
 2	Legião de Maria	A Legião de Maria é um grupo de leigos devotos que se dedicam à evangelização e ao serviço na comunidade, inspirados pela Virgem Maria. Reúnem-se regularmente para oração, estudo e apoio mútuo na vivência da fé católica.	legiao-de-maria	2024-06-13 12:15:48.618	2024-06-13 12:15:48.618	1	1
-3	Renovação Carismática Católica	A Renovação Carismática Católica é um movimento dentro da Igreja que enfatiza a experiência pessoal do Espírito Santo e a renovação espiritual através dos dons carismáticos. Seus membros participam de retiros, grupos de oração e eventos de evangelização.	renovacao-carismatica-catolica	2024-06-13 12:16:19.711	2024-06-13 12:16:19.711	1	1
-4	Cursilhos de Cristandade	Os Cursilhos de Cristandade são encontros de formação espiritual que buscam fortalecer a fé dos participantes e capacitá-los para serem líderes cristãos ativos em suas comunidades. O movimento promove a espiritualidade através de palestras, partilhas e momentos de oração intensa.	cursilhos-de-cristandade	2024-06-13 12:16:39.69	2024-06-13 12:16:39.69	1	1
 5	Comunidade Shalom	A Comunidade Shalom é uma comunidade católica de vida consagrada que se dedica à evangelização, educação e promoção da paz. Seus membros vivem em comunidade, compartilhando a vida em oração, serviço aos necessitados e formação espiritual.	comunidade-shalom	2024-06-13 12:16:57.325	2024-06-13 12:16:57.325	1	1
 6	Opus Dei	O Opus Dei é uma prelazia pessoal da Igreja Católica que promove a busca da santidade através do trabalho diário e da vida ordinária. Seus membros são leigos e sacerdotes que buscam integrar sua vida profissional e familiar com a fé católica.	opus-dei	2024-06-13 12:17:21.572	2024-06-13 12:17:21.572	1	1
-7	Fraternidade Sacerdotal Jesus Cristo Sacerdote	A Fraternidade Sacerdotal Jesus Cristo Sacerdote é uma associação de padres diocesanos que se dedicam à formação espiritual e ao apostolado. Eles vivem em fraternidade e colaboram estreitamente com os fiéis em suas paróquias e dioceses.	fraternidade-sacerdotal-jesus-cristo-sacerdote	2024-06-13 12:17:38.279	2024-06-13 12:17:38.279	1	1
+4	Cristandade	Os Cursilhos de Cristandade são encontros de formação espiritual que buscam fortalecer a fé dos participantes e capacitá-los para serem líderes cristãos ativos em suas comunidades. O movimento promove a espiritualidade através de palestras, partilhas e momentos de oração intensa.	cristandade	2024-06-13 12:16:39.69	2024-06-13 12:47:42.045	1	1
+3	Renovação Carismática	A Renovação Carismática Católica é um movimento dentro da Igreja que enfatiza a experiência pessoal do Espírito Santo e a renovação espiritual através dos dons carismáticos. Seus membros participam de retiros, grupos de oração e eventos de evangelização.	renovacao-carismatica	2024-06-13 12:16:19.711	2024-06-13 12:48:26.055	1	1
+7	Fraternidade Jesus	A Fraternidade Sacerdotal Jesus Cristo Sacerdote é uma associação de padres diocesanos que se dedicam à formação espiritual e ao apostolado. Eles vivem em fraternidade e colaboram estreitamente com os fiéis em suas paróquias e dioceses.	fraternidade-jesus	2024-06-13 12:17:38.279	2024-06-13 12:49:11.059	1	1
 \.
 
 
@@ -2710,7 +2710,7 @@ SELECT pg_catalog.setval('public.files_id_seq', 94, true);
 -- Name: files_related_morphs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.files_related_morphs_id_seq', 133, true);
+SELECT pg_catalog.setval('public.files_related_morphs_id_seq', 138, true);
 
 
 --
@@ -4656,7 +4656,7 @@ REVOKE USAGE ON SCHEMA public FROM PUBLIC;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2024-06-13 12:41:07
+-- Completed on 2024-06-14 12:15:18
 
 --
 -- PostgreSQL database dump complete

@@ -6,6 +6,10 @@ import { New } from "@pages/New";
 import { News } from "@pages/News";
 import { NotFound } from "@pages/NotFound";
 import { createBrowserRouter } from "react-router-dom";
+import { HorarioMissa } from "@pages/HorarioMissa";
+import { AoVivo } from "@pages/AoVivo";
+import { Liturgia } from "@pages/Liturgia";
+import { Agenda } from "@pages/Agenda";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +34,22 @@ const router = createBrowserRouter([
       {
         path: "/noticias",
         element: <News />,
+      },
+      {
+        path: "/atalhos/horario-missa",
+        element: <HorarioMissa />,
+      },
+      {
+        path: "/atalhos/liturgia",
+        element: <Liturgia />,
+      },
+      {
+        path: "/atalhos/ao-vivo",
+        element: <AoVivo />,
+      },
+      {
+        path: "/agenda",
+        element: <Agenda />,
       },
       {
         path: "*",

@@ -121,6 +121,32 @@ export interface VerseProps {
   text: string;
 }
 
+export interface LiturgiaProps {
+  cor: string;
+  data: string;
+  liturgia: string;
+  primeiraLeitura: {
+    referencia: string;
+    titulo: string;
+    texto: string;
+  };
+  segundaLeitura?: {
+    referencia: string;
+    titulo: string;
+    texto: string;
+  };
+  salmo: {
+    referencia: string;
+    refrao: string;
+    texto: string;
+  };
+  evangelho: {
+    referencia: string;
+    titulo: string;
+    texto: string;
+  };
+}
+
 export interface GroupProps {
   id: number;
   attributes: {
